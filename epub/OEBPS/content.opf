@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package version="3.0" unique-identifier="BookId" xmlns="http://www.idpf.org/2007/opf">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:title>Liberating Humanity: How Jesus Exposed the Evil God of Moses and Warned of Paul</dc:title>
+        <dc:creator>Ansilo Boff</dc:creator>
+        <dc:language>en</dc:language>
+        <dc:identifier id="BookId">urn:uuid:28d0da50-5c9e-11eb-ae93-0242ac130002</dc:identifier>
+        <dc:date>2025-04-13</dc:date>
+        <dc:publisher>Truth Beyond Tradition</dc:publisher>
+        <dc:rights>© Copyright 2025 - All rights reserved.</dc:rights>
+        <dc:subject>Religion</dc:subject>
+        <dc:subject>Christianity</dc:subject>
+        <dc:subject>Biblical Studies</dc:subject>
+        <dc:description>Rediscovering Jesus' Subverted Teachings and the Father's Love. A groundbreaking examination of the contrasts between Jesus' teachings and the Old Testament God, exploring how Jesus revealed a different divine nature than that portrayed in earlier scripture.</dc:description>
+        <meta property="dcterms:modified">2025-04-13T12:00:00Z</meta>
+        <meta name="cover" content="cover-image"/>
+    </metadata>
+    
+    <manifest>
+        <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+        <item id="style" href="styles.css" media-type="text/css"/>
+        <item id="toc" href="toc.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+        <item id="title" href="title.xhtml" media-type="application/xhtml+xml"/>
+        <item id="copyright" href="copyright.xhtml" media-type="application/xhtml+xml"/>
+        <item id="intro" href="intro.xhtml" media-type="application/xhtml+xml"/>
+        <item id="part1" href="part1.xhtml" media-type="application/xhtml+xml"/>
+        <item id="chapter1" href="chapter1.xhtml" media-type="application/xhtml+xml"/>
+        <item id="chapter2" href="chapter2.xhtml" media-type="application/xhtml+xml"/>
+        <item id="chapter3" href="chapter3.xhtml" media-type="application/xhtml+xml"/>
+        <item id="chapter4" href="chapter4.xhtml" media-type="application/xhtml+xml"/>
+        <item id="part2" href="part2.xhtml" media-type="application/xhtml+xml"/>
+        <item id="chapter5" href="chapter5.xhtml" media-type="application/xhtml+xml"/>
+        <item id="chapter6" href="chapter6.xhtml" media-type="application/xhtml+xml"/>
+        <item id="chapter7" href="chapter7.xhtml" media-type="application/xhtml+xml"/>
+        <item id="part3" href="part3.xhtml" media-type="application/xhtml+xml"/>
+        <item id="chapter8" href="chapter8.xhtml" media-type="application/xhtml+xml"/>
+        <item id="chapter9" href="chapter9.xhtml" media-type="application/xhtml+xml"/>
+        <item id="appendix1" href="appendix1.xhtml" media-type="application/xhtml+xml"/>
+        <item id="appendix2" href="appendix2.xhtml" media-type="application/xhtml+xml"/>
+        <item id="appendix3" href="appendix3.xhtml" media-type="application/xhtml+xml"/>
+        <item id="bibliography" href="bibliography.xhtml" media-type="application/xhtml+xml"/>
+        <item id="cover-image" href="cover.jpg" media-type="image/jpeg" properties="cover-image"/>
+        <item id="unity-image" href="Unity.jpg" media-type="image/jpeg"/>
+        <item id="timeline-image" href="timeline.jpg" media-type="image/jpeg"/>
+    </manifest>
+    
+    <spine toc="ncx">
+        <itemref idref="title"/>
+        <itemref idref="toc"/>
+        <itemref idref="copyright"/>
+        <itemref idref="intro"/>
+        <itemref idref="part1"/>
+        <itemref idref="chapter1"/>
+        <itemref idref="chapter2"/>
+        <itemref idref="chapter3"/>
+        <itemref idref="chapter4"/>
+        <itemref idref="part2"/>
+        <itemref idref="chapter5"/>
+        <itemref idref="chapter6"/>
+        <itemref idref="chapter7"/>
+        <itemref idref="part3"/>
+        <itemref idref="chapter8"/>
+        <itemref idref="chapter9"/>
+        <itemref idref="appendix1"/>
+        <itemref idref="appendix2"/>
+        <itemref idref="appendix3"/>
+        <itemref idref="bibliography"/>
+    </spine>
+</package> 

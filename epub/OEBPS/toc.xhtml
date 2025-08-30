@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="en">
+<head>
+    <title>Table of Contents</title>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <style type="text/css">
+        body {
+            max-width: var(--content-width, 800px);
+            margin: 0 auto;
+            padding: 2em;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        nav {
+            width: 100%;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 1.5em;
+            font-size: 2em;
+            font-weight: 600;
+            text-align: center;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.5em;
+        }
+        ol {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            margin: 0.5em 0;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+            display: block;
+            padding: 0.75em 1em;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+        a:hover {
+            background: #f5f5f5;
+            color: #004499;
+            transform: translateX(5px);
+        }
+        /* Part styling */
+        li a[href*="part"] {
+            font-weight: 600;
+            font-size: 1.1em;
+            color: #2c3e50;
+            background: #f8f9fa;
+            border-left: 4px solid #2c3e50;
+            margin: 1.5em 0 0.5em 0;
+        }
+        li a[href*="part"]:hover {
+            background: #e9ecef;
+            color: #1a252f;
+        }
+        /* Chapter styling */
+        li a[href*="chapter"] {
+            margin-left: 1.5em;
+            color: #4a5568;
+            border-left: 2px solid #e2e8f0;
+        }
+        /* Introduction and Appendix styling */
+        li a[href="intro.xhtml"],
+        li a[href*="appendix"],
+        li a[href="bibliography.xhtml"] {
+            font-weight: 500;
+            color: #4a5568;
+            border-left: 2px solid #e2e8f0;
+        }
+        /* Active state */
+        a:active {
+            background: #e2e8f0;
+        }
+    </style>
+    <script type="text/javascript">
+    //<![CDATA[
+        function navigateToChapter(href, event) {
+            event.preventDefault();
+            if (window.parent && window.parent !== window) {
+                window.parent.postMessage({ type: 'navigate', href: href }, '*');
+            } else {
+                window.location.href = href;
+            }
+        }
+    //]]>
+    </script>
+</head>
+<body>
+    <nav epub:type="toc">
+        <h1>Table of Contents</h1>
+        <ol>
+            <li><a href="intro.xhtml" onclick="navigateToChapter('intro.xhtml', event)">Introduction: READ THIS FIRST!</a></li>
+            <li><a href="part1.xhtml#part1" onclick="navigateToChapter('part1.xhtml#part1', event)">Part 1: Yahweh vs. the Father – The Great Divide</a></li>
+            <li><a href="chapter1.xhtml" onclick="navigateToChapter('chapter1.xhtml', event)">Chapter 1: Jesus Simple Questions Reveal A Startling Identity</a></li>
+            <li><a href="chapter2.xhtml" onclick="navigateToChapter('chapter2.xhtml', event)">Chapter 2: Yahweh Unmasked – A Warrior God's Legacy</a></li>
+            <li><a href="chapter3.xhtml" onclick="navigateToChapter('chapter3.xhtml', event)">Chapter 3: Jesus' Father—A God of Love, Not Terror</a></li>
+            <li><a href="chapter4.xhtml" onclick="navigateToChapter('chapter4.xhtml', event)">Chapter 4: "I Desire Mercy, Not Sacrifice"</a></li>
+            <li><a href="part2.xhtml#part2" onclick="navigateToChapter('part2.xhtml#part2', event)">Part 2: Jesus versus Paul – The Great Divide</a></li>
+            <li><a href="chapter5.xhtml" onclick="navigateToChapter('chapter5.xhtml', event)">Chapter 5: The Blinding Deceiver</a></li>
+            <li><a href="chapter6.xhtml" onclick="navigateToChapter('chapter6.xhtml', event)">Chapter 6: Jesus and Paul - Poles Apart</a></li>
+            <li><a href="chapter7.xhtml" onclick="navigateToChapter('chapter7.xhtml', event)">Chapter 7: Earliest Writings: How Paul Hijacked the Legacy of Jesus</a></li>
+            <li><a href="part3.xhtml#part3" onclick="navigateToChapter('part3.xhtml#part3', event)">Part 3: Bible Texts Altered</a></li>
+            <li><a href="chapter8.xhtml" onclick="navigateToChapter('chapter8.xhtml', event)">Chapter 8: How Scribes Warped the Text</a></li>
+            <li><a href="chapter9.xhtml" onclick="navigateToChapter('chapter9.xhtml', event)">Chapter 9: Reclaiming Jesus from the Edits: The Father's Light Still Shines</a></li>
+            <li><a href="appendix1.xhtml" onclick="navigateToChapter('appendix1.xhtml', event)">Appendix 1: Textual Variants in Key Bible Passages</a></li>
+            <li><a href="appendix2.xhtml" onclick="navigateToChapter('appendix2.xhtml', event)">Appendix 2: Limited List of Instances of Jesus Breaking the Mosaic Law</a></li>
+            <li><a href="appendix3.xhtml" onclick="navigateToChapter('appendix3.xhtml', event)">Appendix 3: The phrase "pierced my hands and feet" in Psalm 22:16</a></li>
+            <li><a href="bibliography.xhtml" onclick="navigateToChapter('bibliography.xhtml', event)">Bibliography</a></li>
+        </ol>
+    </nav>
+</body>
+</html> 

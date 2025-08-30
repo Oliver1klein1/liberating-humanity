@@ -1,0 +1,1616 @@
+/* Root variables */
+:root {
+    --primary-color: #2c5282;
+    --secondary-color: #e53e3e;
+    --accent-color: #f6ad55;
+    --text-color: #2d3748;
+    --background-color: #f7fafc;
+    --callout-bg: #ebf8ff;
+    --note-bg: #fefcbf;
+    --content-width: 800px;
+    --quote-bg: #f7fafc;
+    --comparison-border: #e2e8f0;
+    --border-color: #cbd5e0;
+    --part-border-color: #2c5282;
+}
+
+/* Base styles */
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: #333;
+    text-align: justify;
+}
+
+main {
+    width: 100%;
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+#chapter-content {
+    width: 100%;
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+/* Title page styles */
+.title-page {
+    text-align: center;
+    padding: 4rem 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.subtitle {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+}
+
+.subtitle-2 {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    margin-bottom: 3rem;
+    line-height: 1.4;
+}
+
+.author-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+
+/* Copyright page styles */
+.copyright-page {
+    text-align: center;
+    padding: 4rem 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.copyright-text {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 1.5em;
+    margin-bottom: 0.8em;
+}
+
+/* Table of Contents */
+nav[epub|type='toc'] > ol {
+    list-style: none !important;
+    padding-left: 0;
+    counter-reset: none !important;
+}
+
+nav[epub|type='toc'] ol {
+    list-style: none !important;
+    padding-left: 1.5em;
+    margin: 0;
+    counter-reset: none !important;
+}
+
+nav[epub|type='toc'] li {
+    margin: 0.5em 0;
+    list-style: none !important;
+    counter-increment: none !important;
+}
+
+nav[epub|type='toc'] li::before {
+    content: none !important;
+}
+
+nav[epub|type='toc'] a {
+    text-decoration: none;
+    color: #2c3e50;
+}
+
+nav[epub|type='toc'] span {
+    font-weight: bold;
+    color: #1a365d;
+}
+
+.toc-list, .toc-list ol, .toc-list li {
+    list-style: none !important;
+    counter-reset: none !important;
+    counter-increment: none !important;
+}
+
+.toc-list li::before {
+    content: none !important;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5em 0;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+th, td {
+    padding: 0.75em 1em;
+    text-align: left;
+    border: 1px solid #e2e8f0;
+}
+
+th {
+    background-color: #4a5568;
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f7fafc;
+}
+
+/* Boxes and Callouts */
+.callout, .note, .infographic {
+    margin: 2em auto;
+    padding: 1.5em;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    max-width: 90%;
+}
+
+.note {
+    background-color: var(--quote-bg);
+    border-left: 4px solid var(--primary-color);
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 0.5rem;
+}
+
+.infographic {
+    background-color: #f0fff4;
+    border-color: #9ae6b4;
+}
+
+/* Contrast Box */
+.contrast-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+    margin: 2em 0;
+    padding: 1.5em;
+    background-color: #f7fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5em;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.contrast-side {
+    padding: 1em;
+    border-radius: 0.3em;
+}
+
+.contrast-side-1 {
+    background-color: #fff5f5;
+    border: 1px solid #fc8181;
+}
+
+.contrast-side-2 {
+    background-color: #f0fff4;
+    border: 1px solid #9ae6b4;
+}
+
+.contrast-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1em;
+    color: #2d3748;
+}
+
+@media screen and (max-width: 768px) {
+    .contrast-box {
+        grid-template-columns: 1fr;
+        gap: 1em;
+    }
+}
+
+/* Journey boxes within infographic */
+.three-part-journey {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5em;
+    margin-top: 1em;
+}
+
+.journey-box {
+    background-color: white;
+    padding: 1em;
+    border-radius: 0.3em;
+    border: 1px solid #e2e8f0;
+}
+
+.journey-title {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    color: #2d3748;
+}
+
+.journey-description {
+    color: #4a5568;
+    font-size: 0.95em;
+}
+
+.infographic-title {
+    font-weight: bold;
+    margin-bottom: 1em;
+    color: #2d3748;
+    text-align: center;
+}
+
+/* Note title styling */
+.note-title {
+    display: block;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Text styling within boxes */
+.text-xl {
+    font-size: 1.25em;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+/* Chapter Titles */
+.chapter-title {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+    padding-top: 2rem;
+}
+
+.chapter-number {
+    display: block;
+    font-size: 1.2em;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+/* Scripture Quotes */
+.scripture-quote {
+    margin: 2em 0;
+    padding: 1.5em 2em;
+    background-color: #f7f7ff;
+    border-left: 4px solid #5c6ac4;
+    font-style: italic;
+    color: #2c3e50;
+    line-height: 1.6;
+    position: relative;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(92, 106, 196, 0.1);
+}
+
+.scripture-quote p {
+    margin: 0;
+    padding: 0;
+    font-size: 1.1em;
+}
+
+.scripture-quote::before {
+    content: '"';
+    font-size: 3em;
+    color: #2980b9;
+    opacity: 0.2;
+    position: absolute;
+    left: 0.2em;
+    top: 0.2em;
+}
+
+.scripture-quote::after {
+    content: '"';
+    font-size: 3em;
+    color: #2980b9;
+    opacity: 0.2;
+    position: absolute;
+    right: 0.2em;
+    bottom: -0.5em;
+}
+
+/* First Quote of Chapter */
+.scripture-quote:first-of-type {
+    margin: 3em auto;
+    padding: 2.5em;
+    max-width: 85%;
+    background: #f8fafc;
+    border: 2px solid #2c5282;
+    border-radius: 8px;
+    position: relative;
+    font-size: 1.5em;
+    line-height: 1.7;
+    color: #2d3748;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.scripture-quote:first-of-type::before {
+    content: '"';
+    position: absolute;
+    left: 50%;
+    top: -0.6em;
+    transform: translateX(-50%);
+    font-size: 4em;
+    color: #2c5282;
+    background: #f8fafc;
+    padding: 0 0.2em;
+    line-height: 1;
+}
+
+.scripture-quote:first-of-type p {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.scripture-quote:first-of-type + p {
+    text-align: right;
+    color: #2c5282;
+    font-style: italic;
+    margin-top: -1.5em;
+    margin-right: 4em;
+    font-size: 1em;
+    font-weight: normal;
+}
+
+/* Comparison Table Styles */
+.comparison-container {
+    max-width: 100%;
+    margin: 2em auto;
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(41, 128, 185, 0.1);
+}
+
+.comparison-box {
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.comparison-title {
+    background-color: #2980b9;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.comparison {
+    display: flex;
+    border-bottom: 1px solid #e2e8f0;
+    background-color: #fff;
+}
+
+.comparison:last-child {
+    border-bottom: none;
+}
+
+.comparison-column {
+    flex: 1;
+    padding: 1.5em;
+    background-color: #fff;
+}
+
+.comparison-column:first-child {
+    border-right: 1px solid #e2e8f0;
+    background-color: #fff5f5;
+}
+
+.comparison-column:last-child {
+    background-color: #f0fff4;
+}
+
+.comparison-column h3 {
+    margin: 0 0 1em 0;
+    color: #2d3748;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.comparison-column .scripture-quote {
+    margin: 0;
+    padding: 1em;
+    background-color: rgba(241, 248, 255, 0.7);
+    border-left: none;
+    border-radius: 6px;
+    box-shadow: none;
+}
+
+.callout .comparison-container {
+    margin: 0;
+}
+
+.callout {
+    margin: 2em 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Regular quotes */
+.quote {
+    margin: 2em 0;
+    padding: 1.5em 2em;
+    background-color: #f7f7ff;
+    border-left: 4px solid #5c6ac4;
+    font-style: italic;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(92, 106, 196, 0.1);
+}
+
+.quote p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* First Quote of Chapter - Distinctive Box Design */
+.first-quote {
+    margin: 3.5em auto;
+    padding: 3em;
+    max-width: 85%;
+    background: linear-gradient(to bottom right, #ffffff, #f8fafc);
+    border: 1px solid #3b82f6;
+    border-radius: 3px;
+    position: relative;
+    font-size: 1.4em;
+    line-height: 1.7;
+    color: #1e293b;
+    text-align: center;
+}
+
+.first-quote::before,
+.first-quote::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #3b82f6;
+}
+
+.first-quote::before {
+    top: -1px;
+    left: -1px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.first-quote::after {
+    bottom: -1px;
+    right: -1px;
+    border-left: none;
+    border-top: none;
+}
+
+.first-quote p {
+    margin: 0;
+    padding: 0;
+    font-style: italic;
+    position: relative;
+}
+
+.first-quote cite {
+    display: block;
+    margin-top: 1.5em;
+    font-size: 0.7em;
+    color: #64748b;
+    font-style: normal;
+    text-align: right;
+}
+
+.first-quote cite::before {
+    content: '—';
+    margin-right: 0.5em;
+}
+
+/* Remove any conflicting opening-quote styles */
+.opening-quote {
+    margin: 2em 0;
+    padding: 1.5em;
+    font-style: italic;
+    color: #1e293b;
+    text-align: center;
+}
+
+.opening-quote::before,
+.opening-quote::after {
+    display: none;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 2em auto;
+}
+
+.unity-diagram img {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 2em auto;
+}
+
+.timeline-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 2em auto;
+}
+
+figcaption {
+    text-align: center;
+    font-size: 0.9em;
+    color: #718096;
+    margin-top: 0.5em;
+}
+
+/* Navigation */
+nav[epub|type='landmarks'] {
+    margin-top: 2em;
+    padding-top: 1em;
+    border-top: 1px solid #e2e8f0;
+}
+
+nav[epub|type='landmarks'] a {
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+/* Lists */
+.icon-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.icon-list li {
+    margin: 0.5em 0;
+    padding-left: 1.5em;
+    position: relative;
+}
+
+.check-list li:before {
+    content: "✓";
+    color: #48bb78;
+    position: absolute;
+    left: 0;
+}
+
+.xmark-list li:before {
+    content: "✗";
+    color: #e53e3e;
+    position: absolute;
+    left: 0;
+}
+
+/* Grid Layout */
+.grid {
+    display: grid;
+    gap: 1em;
+    margin: 1.5em 0;
+}
+
+.grid-cols-1 {
+    grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: 768px) {
+    .md\:grid-cols-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Text styles */
+.text-xl {
+    font-size: 1.25rem;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+/* Responsive design */
+@media screen and (max-width: 992px) {
+    .three-part-journey {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .journey-box:last-child {
+        grid-column: 1 / -1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .three-part-journey {
+        grid-template-columns: 1fr;
+    }
+    .journey-box {
+        grid-column: 1;
+    }
+    .main-title {
+        font-size: 2.5rem;
+    }
+    .subtitle {
+        font-size: 1.5rem;
+    }
+    .subtitle-2 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Cover image */
+.cover-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Footnotes */
+.footnote {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 2em;
+    border-top: 1px solid #ccc;
+    padding-top: 1em;
+}
+
+/* Blockquotes */
+blockquote {
+    margin: 2rem 0;
+    padding: 1rem 2rem;
+    border-left: 4px solid #3498db;
+    background: #f8f9fa;
+    font-style: italic;
+}
+
+cite {
+    color: #666;
+    font-style: normal;
+}
+
+/* Textual changes table */
+.textual-changes {
+    margin: 2rem 0;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+}
+
+.textual-changes th {
+    background-color: #4a5568;
+    color: white;
+    padding: 1rem;
+}
+
+.textual-changes td {
+    font-size: 0.95rem;
+    padding: 1rem;
+}
+
+.textual-changes .original {
+    color: #718096;
+    font-style: italic;
+    border-right: 2px solid #e2e8f0;
+}
+
+.textual-changes .changed {
+    color: #2d3748;
+    font-weight: 500;
+}
+
+.textual-changes .verse-ref {
+    font-family: monospace;
+    color: #718096;
+    font-size: 0.85rem;
+}
+
+/* Lists */
+ul, ol {
+    margin: 1.2em 0;
+    padding-left: 2em;
+}
+
+li {
+    margin: 0.8em 0;
+    line-height: 1.6;
+}
+
+/* Links */
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive table adjustments */
+@media screen and (max-width: 768px) {
+    .comparison-table {
+        margin: 1rem 0;
+    }
+    
+    .comparison-table table {
+        min-width: 400px;
+    }
+    
+    .comparison-table th,
+    .comparison-table td {
+        padding: 0.75rem;
+    }
+    
+    .textual-changes th,
+    .textual-changes td {
+        padding: 0.75rem;
+    }
+}
+
+/* Section titles */
+.section-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    margin: 2em 0 1em;
+    color: #2d3748;
+}
+
+/* Atrocity boxes */
+.atrocity-box {
+    margin: 2em 0;
+    padding: 1.5em;
+    background-color: #fff5f5;
+    border: 1px solid #fc8181;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.atrocity-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #c53030;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.atrocity-box p {
+    color: #2d3748;
+    line-height: 1.6;
+}
+
+/* Manuscript boxes */
+.manuscript-box {
+    margin: 2em 0;
+    padding: 1.5em;
+    background-color: #f8f9fa;
+    border: 1px solid #4a5568;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.manuscript-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #2d3748;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.manuscript-box p {
+    color: #2d3748;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Ensure underlined text is clearly visible */
+u {
+    text-decoration: underline;
+    text-decoration-thickness: 0.1em;
+    text-underline-offset: 0.2em;
+}
+
+/* View boxes for contrasting perspectives */
+.view-box {
+    margin: 2em 0;
+    padding: 1.5em;
+    background-color: #f7f7ff;
+    border: 1px solid #5c6ac4;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.view-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #2d3748;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.view-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.view-list li {
+    margin: 0.75em 0;
+    padding-left: 1.5em;
+    position: relative;
+    color: #2d3748;
+    line-height: 1.4;
+}
+
+.view-list li:before {
+    content: "•";
+    position: absolute;
+    left: 0.5em;
+    color: #5c6ac4;
+}
+
+/* Claim boxes */
+.claim-box {
+    margin: 2em 0;
+    padding: 1.5em;
+    background-color: #fffaf0;
+    border: 1px solid #ed8936;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.claim-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #c05621;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.claim-box p {
+    color: #2d3748;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Historical boxes */
+.historical-box {
+    margin: 2em 0;
+    padding: 1.5em;
+    background-color: #f0f4f8;
+    border: 1px solid #4a5568;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.historical-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #2c5282;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.historical-box p {
+    color: #2d3748;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Add to existing styles */
+
+.emphasis {
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.comparison-container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.comparison-box {
+    border: 1px solid #e1e4e8;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.comparison-title {
+    background-color: #f1f8ff;
+    padding: 1em;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 1px solid #e1e4e8;
+}
+
+.comparison {
+    display: flex;
+    border-bottom: 1px solid #e1e4e8;
+}
+
+.comparison:last-child {
+    border-bottom: none;
+}
+
+.comparison-column {
+    flex: 1;
+    padding: 1em;
+}
+
+.comparison-column:first-child {
+    border-right: 1px solid #e1e4e8;
+}
+
+.comparison-column h3 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    color: #24292e;
+}
+
+.comparison-column .scripture-quote {
+    margin: 0;
+    background-color: transparent;
+    border-left: none;
+}
+
+/* Ensure all XML entities are properly handled */
+[class^="icon-list"] {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.check-list li::before {
+    content: "✓";
+    color: #15803d;
+    margin-right: 0.5rem;
+}
+
+.xmark-list li::before {
+    content: "✗";
+    color: #b91c1c;
+    margin-right: 0.5rem;
+}
+
+/* Bible quotes and callouts */
+.bible-quote {
+    margin: 2em 0;
+    padding: 1.5em;
+    background-color: #f8f9fa;
+    border-left: 4px solid #4a5568;
+    font-style: italic;
+}
+
+.bible-quote p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.quote {
+    margin: 2em 0;
+    padding: 1.8em 2em;
+    background-color: #f8fafc;
+    border-left: 5px solid #3b82f6;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.1);
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+.quote p {
+    margin: 0;
+    font-size: 1.1em;
+    font-style: normal;
+}
+
+.quote-author {
+    display: block;
+    margin-top: 1.2em;
+    color: #3b82f6;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 0.9em;
+    text-align: right;
+}
+
+/* Navigation styles */
+nav {
+    margin: 2em auto;
+    max-width: 800px;
+}
+
+nav ol {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    margin: 0.5em 0;
+}
+
+nav a {
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Table of Contents specific styles */
+#toc {
+    margin: 2em auto;
+    max-width: 800px;
+}
+
+#toc h1 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+#toc ol {
+    list-style-type: none;
+    padding: 0;
+}
+
+#toc li {
+    margin: 0.5em 0;
+}
+
+#toc a {
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+#toc a:hover {
+    text-decoration: underline;
+}
+
+.callout {
+    margin: 2em 0;
+    padding: 1em;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+}
+
+.callout p {
+    margin: 0;
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+.comparison-title {
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.quote-author {
+    display: block;
+    font-style: italic;
+    margin-top: 0.5rem;
+    color: var(--primary-color);
+}
+
+b {
+    color: var(--primary-color);
+}
+
+.chapter-header {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.chapter-number {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+nav {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 2px solid #ddd;
+}
+
+nav a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #2980b9;
+}
+
+.chapter-nav {
+    margin-top: 2em;
+    padding-top: 1em;
+    border-top: 1px solid #ddd;
+}
+
+.next-chapter {
+    display: block;
+    text-decoration: none;
+    color: #0066cc;
+    font-weight: bold;
+}
+
+.next-chapter:hover {
+    color: #004499;
+}
+
+/* Key Point and Quote Styles */
+.key-point, .quote, .scripture-quote {
+    margin: 2em 0;
+    padding: 1.5em 2em;
+    background-color: #f7f7ff;
+    border-left: 4px solid #5c6ac4;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(92, 106, 196, 0.1);
+    font-style: normal;
+    color: #2d3748;
+    line-height: 1.6;
+}
+
+.key-point-title {
+    display: block;
+    font-weight: bold;
+    color: #5c6ac4;
+    margin-bottom: 1em;
+    font-size: 1.1em;
+}
+
+/* Key Insight - Different Style */
+.key-insight {
+    margin: 2em 0;
+    padding: 1.5em 2em;
+    background-color: #ebf8ff;
+    border-left: 4px solid #3182ce;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(49, 130, 206, 0.1);
+}
+
+.key-insight-title {
+    display: block;
+    font-weight: bold;
+    color: #3182ce;
+    margin-bottom: 1em;
+    font-size: 1.1em;
+}
+
+/* Important Note - Different Style */
+.important-note {
+    margin: 2em 0;
+    padding: 1.5em 2em;
+    background-color: #fff5f5;
+    border-left: 4px solid #e53e3e;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(229, 62, 62, 0.1);
+}
+
+.important-note-title {
+    display: block;
+    font-weight: bold;
+    color: #e53e3e;
+    margin-bottom: 1em;
+    font-size: 1.1em;
+}
+
+/* Override any conflicting styles */
+.quote p, .scripture-quote p, .key-point p, .callout p {
+    margin: 0;
+    padding: 0;
+    color: #2d3748;
+    line-height: 1.6;
+    font-style: normal;
+}
+
+/* Remove conflicting quote decorations */
+.scripture-quote::before,
+.scripture-quote::after,
+.quote::before,
+.quote::after {
+    content: none;
+}
+
+/* Ensure quote author styling */
+.quote-author {
+    display: block;
+    margin-top: 1em;
+    color: #5c6ac4;
+    font-style: normal;
+    font-weight: bold;
+}
+
+/* Key Point styling - matches the image */
+.key-point {
+    margin: 2.5em 0;
+    padding: 2em;
+    background-color: #f8fafc;
+    border-left: 5px solid #3b82f6;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.1);
+}
+
+.key-point-title {
+    display: block;
+    font-weight: bold;
+    color: #1e40af;
+    margin-bottom: 1em;
+    font-size: 1.2em;
+}
+
+/* First/Opening Quote - More Dramatic */
+.opening-quote {
+    margin: 3em 1.5em;
+    padding: 2.5em;
+    background-color: #f8fafc;
+    border-left: 5px solid #3b82f6;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.1);
+    font-size: 1.4em;
+    line-height: 1.6;
+    color: #1e293b;
+    position: relative;
+}
+
+.opening-quote::before {
+    content: '"';
+    position: absolute;
+    left: -0.5em;
+    top: 0;
+    font-size: 4em;
+    color: #3b82f6;
+    opacity: 0.2;
+}
+
+.opening-quote p {
+    margin: 0;
+    font-style: italic;
+}
+
+.opening-quote cite {
+    display: block;
+    margin-top: 1.5em;
+    font-size: 0.8em;
+    color: #64748b;
+    font-style: normal;
+    text-align: right;
+}
+
+/* Regular quotes - Similar to Key Point */
+.quote, .scripture-quote {
+    margin: 2em 0;
+    padding: 1.8em 2em;
+    background-color: #f8fafc;
+    border-left: 5px solid #3b82f6;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.1);
+    color: #1e293b;
+    line-height: 1.6;
+    font-style: normal;
+}
+
+.quote p, .scripture-quote p {
+    margin: 0;
+    font-size: 1.1em;
+    font-style: normal;
+}
+
+/* Key Insight - Different Style */
+.key-insight {
+    margin: 2.5em 0;
+    padding: 2em;
+    background-color: #f0f9ff;
+    border-left: 5px solid #0ea5e9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(14, 165, 233, 0.1);
+}
+
+.key-insight-title {
+    display: block;
+    font-weight: bold;
+    color: #0369a1;
+    margin-bottom: 1em;
+    font-size: 1.2em;
+}
+
+/* Important Note - Different Style */
+.important-note {
+    margin: 2.5em 0;
+    padding: 2em;
+    background-color: #fef2f2;
+    border-left: 5px solid #ef4444;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(239, 68, 68, 0.1);
+}
+
+.important-note-title {
+    display: block;
+    font-weight: bold;
+    color: #b91c1c;
+    margin-bottom: 1em;
+    font-size: 1.2em;
+}
+
+/* Quote author styling */
+.quote-author {
+    display: block;
+    margin-top: 1.2em;
+    color: #3b82f6;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 0.9em;
+    text-align: right;
+}
+
+/* Remove decorative quotes that might interfere */
+.scripture-quote::before,
+.scripture-quote::after {
+    display: none;
+}
+
+/* Keep certain elements center-aligned */
+h1, h2, h3, h4, h5, h6,
+.title-page,
+.copyright-page,
+.chapter-header,
+.section-title,
+.opening-quote {
+    text-align: center;
+}
+
+/* Keep certain elements left-aligned */
+.quote-author,
+.scripture-quote cite,
+.opening-quote cite {
+    text-align: right;
+}
+
+p {
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+}
+
+/* Chapter opening quote */
+.chapter-opening-quote {
+    margin: 3em auto !important;
+    padding: 2em !important;
+    max-width: 85% !important;
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.chapter-opening-quote p {
+    font-size: 1.5em !important;
+    font-weight: normal !important;
+    line-height: 1.6 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: #2c5282 !important;
+    max-width: 90% !important;
+    font-style: normal !important;
+}
+
+.chapter-opening-quote cite {
+    display: block !important;
+    margin-top: 1em !important;
+    font-size: 0.9em !important;
+    font-style: italic !important;
+    color: #2d3748 !important;
+    align-self: flex-end !important;
+    margin-right: 5% !important;
+}
+
+/* Remove any conflicting styles */
+.first-quote, .opening-quote {
+    display: none !important;
+}
+
+.quote p, .scripture-quote p, .bible-quote p, .callout p, 
+.quote .italic, .scripture-quote .italic, .bible-quote .italic, .callout .italic,
+.chapter-opening-quote p, .chapter-opening-quote .italic {
+    font-style: normal !important;
+}
+
+.quote-author, .scripture-quote cite, .opening-quote cite {
+    font-style: italic;
+}
+
+/* Comparison Table */
+.comparison-table {
+    width: 100%;
+    margin: 2em 0;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1.1em;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.comparison-table th {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1.2em;
+    text-align: center;
+    font-size: 1.3em;
+    border: none;
+}
+
+.comparison-table td {
+    padding: 2em;
+    vertical-align: top;
+    border: 1px solid #e2e8f0;
+    width: 50%;
+}
+
+.comparison-table tr td:first-child {
+    background-color: #fff5f5;
+}
+
+.comparison-table tr td:last-child {
+    background-color: #f0fff4;
+}
+
+.comparison-table .section-header {
+    color: #2c3e50;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 1.2em;
+}
+
+.comparison-table .quote {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    font-size: 1.2em;
+    color: #2d3748;
+}
+
+.comparison-table .reference {
+    display: block;
+    margin-top: 0.5em;
+    color: #718096;
+    font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+    .comparison-table td {
+        padding: 1.5em;
+    }
+    
+    .comparison-table .section-header {
+        font-size: 1.1em;
+    }
+    
+    .comparison-table .quote {
+        font-size: 1.1em;
+    }
+}
+
+/* Part Divider Pages */
+.part-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+    background-color: var(--background-color);
+}
+
+.part-content {
+    max-width: var(--content-width);
+    width: 100%;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.part-border-top,
+.part-border-bottom {
+    height: 3px;
+    background: var(--part-border-color);
+    margin: 2rem auto;
+    width: 60%;
+    position: relative;
+}
+
+.part-border-top::before,
+.part-border-bottom::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    background: var(--part-border-color);
+    width: 80%;
+    left: 10%;
+    opacity: 0.5;
+}
+
+.part-border-top::before {
+    bottom: 6px;
+}
+
+.part-border-bottom::before {
+    top: 6px;
+}
+
+.part-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--part-border-color);
+    margin: 1rem 0;
+    letter-spacing: 0.1em;
+}
+
+.part-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 1rem 0;
+    line-height: 1.4;
+}
+
+/* Glossary styles */
+.glossary dt {
+    font-weight: bold;
+    margin-top: 1.5em;
+    color: var(--primary-color);
+}
+
+.glossary dd {
+    margin-left: 1em;
+    margin-bottom: 1.5em;
+} 

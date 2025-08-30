@@ -1,0 +1,36 @@
+# OS-generated files
+Thumbs.db
+.DS_Store
+
+# Logs
+*.log
+
+# Archives / packaged artifacts
+*.zip
+*.tar
+*.tar.gz
+*.epub
+
+# Editors/IDEs
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.env
+
+# Node
+node_modules/
+
+# Build outputs
+dist/
+build/
+
+# EPUB tooling binaries (keep locally, do not commit)
+epubcheck-5.2.1/
+epubcheck-*/
+*.jar
+
+

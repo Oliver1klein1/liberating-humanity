@@ -3,36 +3,213 @@
 <head>
     <title>Bibliography</title>
     <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <style type="text/css">
+        .bibliography-section {
+            margin: 2em 0;
+            padding: 1em;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        .bibliography-section h3 {
+            color: #2c3e50;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5em;
+            margin-bottom: 1em;
+        }
+        .bibliography-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .bibliography-item {
+            margin: 1em 0;
+            padding: 0.75em;
+            border-left: 3px solid #007acc;
+            background: white;
+            border-radius: 0 4px 4px 0;
+            transition: all 0.2s ease;
+        }
+        .bibliography-item:hover {
+            transform: translateX(5px);
+            border-left-color: #005c99;
+            background: #f0f7ff;
+        }
+        .author {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        .title {
+            font-style: italic;
+            color: #4a5568;
+        }
+        .publisher {
+            color: #718096;
+        }
+        .year {
+            color: #718096;
+            font-weight: 500;
+        }
+        .online-resource {
+            color: #007acc;
+            font-weight: 500;
+        }
+    </style>
 </head>
 <body>
-<h2 class="chapter-title">Bibliography</h2>
-<ol>
-<li>The Holy Bible, Names of God Bible (NOG). Baker Publishing Group, 2011.</li>
-<li>BibleGateway.com and BibleHub.com</li>
-<li>Palekas, Rev. Joe. Making Sense of Psalm 137. The Washington Institute, 2021.</li>
-<li>Bouma, Jeremy. Know the Heretics. HarperCollins, 2014.</li>
-<li>Craig, William Lane. Question: Jesus and the God of the Old Testament. Biola University, 2017.</li>
-<li>Dawkins, Richard. The God Delusion. Bantam Books, 2006.</li>
-<li>Paine, Thomas. The Age of Reason, 1794-1807.</li>
-<li>Goodreads.com - Quotes</li>
-<li>OpenBible.info</li>
-<li>StackExchange - Biblical Hermeneutics and Christianity sections</li>
-<li>Wikipedia - Marcionism</li>
-<li>Early Christian Writings - Tertullian Against Marcion</li>
-<li>Holy Bible, New International Version (NIV)</li>
-<li>Enns, Peter. The Bible Tells Me So. HarperOne, 2014.</li>
-<li>Boyd, Gregory. Cross Vision. Fortress Press, 2017.</li>
-<li>The Gospel Coalition</li>
-<li>Bart D. Ehrman - Misquoting Jesus</li>
-<li>Elaine Pagels - The Gnostic Gospels</li>
-<li>Robert Eisenman - James the Brother of Jesus</li>
-<li>Richard Elliott Friedman - Who Wrote the Bible</li>
-<li>Frank Cross and John Allegro - Dead Sea Scroll scholarship</li>
-<li>Josephus - The Jewish War</li>
-<li>Raymond E. Brown, Marcus Borg - Pseudepigrapha scholarship</li>
-<li>Ross K Nicholls - The Moses Scroll, Horeb Press, 2021</li>
-<li>Dead Sea Scrolls - Qumran</li>
-<li>Church Councils - Nicaea, Chalcedon</li>
-        </ol>
+    <h2 class="chapter-title">Bibliography</h2>
+
+    <div class="bibliography-section">
+        <h3>Primary Biblical Sources</h3>
+        <ul class="bibliography-list">
+            <li class="bibliography-item">
+                <span class="title">The Holy Bible, Names of God Bible (NOG)</span>. 
+                <span class="publisher">Baker Publishing Group</span>, 
+                <span class="year">2011</span>.
+            </li>
+            <li class="bibliography-item">
+                <span class="title">Holy Bible, New International Version (NIV)</span>.
+            </li>
+            <li class="bibliography-item">
+                <span class="title">Dead Sea Scrolls</span> - 
+                <span class="publisher">Qumran</span>.
+            </li>
+        </ul>
+    </div>
+
+    <div class="bibliography-section">
+        <h3>Modern Biblical Scholarship</h3>
+        <ul class="bibliography-list">
+            <li class="bibliography-item">
+                <span class="author">Ehrman, Bart D.</span> 
+                <span class="title">Misquoting Jesus</span>.
+            </li>
+            <li class="bibliography-item">
+                <span class="author">Enns, Peter.</span> 
+                <span class="title">The Bible Tells Me So</span>. 
+                <span class="publisher">HarperOne</span>, 
+                <span class="year">2014</span>.
+            </li>
+            <li class="bibliography-item">
+                <span class="author">Boyd, Gregory.</span> 
+                <span class="title">Cross Vision</span>. 
+                <span class="publisher">Fortress Press</span>, 
+                <span class="year">2017</span>.
+            </li>
+            <li class="bibliography-item">
+                <span class="author">Friedman, Richard Elliott.</span> 
+                <span class="title">Who Wrote the Bible</span>.
+            </li>
+            <li class="bibliography-item">
+                <span class="author">Nicholls, Ross K.</span> 
+                <span class="title">The Moses Scroll</span>. 
+                <span class="publisher">Horeb Press</span>, 
+                <span class="year">2021</span>.
+            </li>
+        </ul>
+    </div>
+
+    <div class="bibliography-section">
+        <h3>Historical Works</h3>
+        <ul class="bibliography-list">
+            <li class="bibliography-item">
+                <span class="author">Josephus.</span> 
+                <span class="title">The Jewish War</span>.
+            </li>
+            <li class="bibliography-item">
+                <span class="author">Paine, Thomas.</span> 
+                <span class="title">The Age of Reason</span>, 
+                <span class="year">1794-1807</span>.
+            </li>
+            <li class="bibliography-item">
+                <span class="author">Pagels, Elaine.</span> 
+                <span class="title">The Gnostic Gospels</span>.
+            </li>
+            <li class="bibliography-item">
+                <span class="author">Eisenman, Robert.</span> 
+                <span class="title">James the Brother of Jesus</span>.
+            </li>
+        </ul>
+    </div>
+
+    <div class="bibliography-section">
+        <h3>Contemporary Studies</h3>
+        <ul class="bibliography-list">
+            <li class="bibliography-item">
+                <span class="author">Palekas, Rev. Joe.</span> 
+                <span class="title">Making Sense of Psalm 137</span>. 
+                <span class="publisher">The Washington Institute</span>, 
+                <span class="year">2021</span>.
+            </li>
+            <li class="bibliography-item">
+                <span class="author">Bouma, Jeremy.</span> 
+                <span class="title">Know the Heretics</span>. 
+                <span class="publisher">HarperCollins</span>, 
+                <span class="year">2014</span>.
+            </li>
+            <li class="bibliography-item">
+                <span class="author">Craig, William Lane.</span> 
+                <span class="title">Question: Jesus and the God of the Old Testament</span>. 
+                <span class="publisher">Biola University</span>, 
+                <span class="year">2017</span>.
+            </li>
+            <li class="bibliography-item">
+                <span class="author">Dawkins, Richard.</span> 
+                <span class="title">The God Delusion</span>. 
+                <span class="publisher">Bantam Books</span>, 
+                <span class="year">2006</span>.
+            </li>
+        </ul>
+    </div>
+
+    <div class="bibliography-section">
+        <h3>Online Resources</h3>
+        <ul class="bibliography-list">
+            <li class="bibliography-item">
+                <span class="online-resource">BibleGateway.com</span> and 
+                <span class="online-resource">BibleHub.com</span>
+            </li>
+            <li class="bibliography-item">
+                <span class="online-resource">OpenBible.info</span>
+            </li>
+            <li class="bibliography-item">
+                <span class="online-resource">StackExchange</span> - Biblical Hermeneutics and Christianity sections
+            </li>
+            <li class="bibliography-item">
+                <span class="online-resource">Early Christian Writings</span> - Tertullian Against Marcion
+            </li>
+            <li class="bibliography-item">
+                <span class="online-resource">The Gospel Coalition</span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="bibliography-section">
+        <h3>Additional References</h3>
+        <ul class="bibliography-list">
+            <li class="bibliography-item">
+                <span class="author">Cross, Frank</span> and 
+                <span class="author">Allegro, John</span> - Dead Sea Scroll scholarship
+            </li>
+            <li class="bibliography-item">
+                <span class="author">Brown, Raymond E.</span> and 
+                <span class="author">Borg, Marcus</span> - Pseudepigrapha scholarship
+            </li>
+            <li class="bibliography-item">
+                Church Councils - <span class="title">Nicaea, Chalcedon</span>
+            </li>
+        </ul>
+    </div>
+    
+    <nav class="navigation" style="text-align: center; margin-top: 2em; padding: 1em; border-top: 1px solid #eee;">
+        <button onclick="navigateToChapter('appendix3.xhtml', event)" style="margin: 0 0.5em; padding: 0.5em 1em; background: #007acc; color: white; border: none; border-radius: 4px; cursor: pointer;">← Backward</button>
+        <button onclick="navigateToChapter('toc.xhtml', event)" style="margin: 0 0.5em; padding: 0.5em 1em; background: #007acc; color: white; border: none; border-radius: 4px; cursor: pointer;">Contents</button>
+    </nav>
+
+    <script type="text/javascript">
+        function navigateToChapter(href, event) {
+            if (event) event.preventDefault();
+            window.location.href = href;
+        }
+    </script>
 </body>
-</html> 
+</html>

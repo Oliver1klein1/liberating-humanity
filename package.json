@@ -1,0 +1,12 @@
+{
+  "name": "epub-viewer",
+  "version": "1.0.0",
+  "description": "Simple server for viewing EPUB files",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

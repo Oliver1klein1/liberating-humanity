@@ -36,25 +36,26 @@
         <p><i>"For false Messiahs and false prophets will appear and perform <b>great signs and wonders</b> to deceive, if possible, even the elect."</i> (Matthew 24:24)</p>
     </div>
     
-    <div class="infographic">
-        <h3 class="infographic-title">Paul's Suspicious Timing and Claims</h3><div class="grid grid-cols-1 gap-4">
-            <div class="bg-red-50 p-4 rounded-lg">
-                <h4 class="font-bold text-center mb-2 text-red-800">Timing</h4>
-                <p class="text-sm">Paul enters the Christian narrative suspiciously early, almost immediately after Jesus' departure. Initially, Paul isn't a believer; in fact, he ruthlessly persecutes Jesus' earliest followers. He drags them off to prison and stands by approvingly as they are executed.</p>
-            </div>
-            <div class="bg-red-50 p-4 rounded-lg">
-                <h4 class="font-bold text-center mb-2 text-red-800">Conversion</h4>
-                <p class="text-sm">Then, suddenly, on a deserted, dusty road to Damascus, he claims a dramatic encounter—a blinding vision of Jesus. Yet this vision isn't comforting or compassionate; it's violent, dramatic, and deeply private.</p>
-            </div>
-            <div class="bg-red-50 p-4 rounded-lg">
-                <h4 class="font-bold text-center mb-2 text-red-800">Message</h4>
-                <p class="text-sm">Almost immediately after this, Paul starts preaching a message fundamentally different from anything Jesus himself had ever taught. Paul quickly begins performing miracles, casting out demons, and asserting an extraordinary divine authority.</p>
-            </div>
-            <div class="bg-purple-50 p-4 rounded-lg">
-                <h4 class="font-bold text-center mb-2 text-purple-800">The Warning</h4>
-                <p class="text-sm">As we saw in the last chapter, this is exactly the scenario Jesus warned us about!</p>
-            </div>
-        </div>
+    <div class="infographic" style="background-color: white; padding: 1em; border-radius: 8px;">
+        <h3 class="infographic-title">Paul's Suspicious Timing and Claims</h3>
+        <table class="comparison-table" style="width: 100%; margin-top: 1em; background-color: white;">
+            <tr>
+                <td style="width: 20%; font-weight: bold; color: #006400; padding: 1em; border-bottom: 1px solid #e2e8f0; background-color: #90EE90;">Timing</td>
+                <td style="padding: 1em; border-bottom: 1px solid #e2e8f0;">Paul enters the Christian narrative suspiciously early, almost immediately after Jesus' departure. Initially, Paul isn't a believer; in fact, he ruthlessly persecutes Jesus' earliest followers. He drags them off to prison and stands by approvingly as they are executed.</td>
+            </tr>
+            <tr>
+                <td style="width: 20%; font-weight: bold; color: #006400; padding: 1em; border-bottom: 1px solid #e2e8f0; background-color: #90EE90;">Conversion</td>
+                <td style="padding: 1em; border-bottom: 1px solid #e2e8f0;">Then, suddenly, on a deserted, dusty road to Damascus, he claims a dramatic encounter—a blinding vision of Jesus. Yet this vision isn't comforting or compassionate; it's violent, dramatic, and deeply private.</td>
+            </tr>
+            <tr>
+                <td style="width: 20%; font-weight: bold; color: #006400; padding: 1em; border-bottom: 1px solid #e2e8f0; background-color: #90EE90;">Message</td>
+                <td style="padding: 1em; border-bottom: 1px solid #e2e8f0;">Almost immediately after this, Paul starts preaching a message fundamentally different from anything Jesus himself had ever taught. Paul quickly begins performing miracles, casting out demons, and asserting an extraordinary divine authority.</td>
+            </tr>
+            <tr>
+                <td style="width: 20%; font-weight: bold; color: #006400; padding: 1em; border-bottom: 1px solid #e2e8f0; background-color: #90EE90;">The Warning</td>
+                <td style="padding: 1em; border-bottom: 1px solid #e2e8f0;">As we saw in the last chapter, this is exactly the scenario Jesus warned us about!</td>
+            </tr>
+        </table>
     </div>
     
     <p>If Paul's teachings indeed <b>differ drastically</b> from Jesus', countless followers might have unknowingly been led astray. This thought <i>shakes me deeply</i> because Paul is considered the cornerstone of modern Christian theology. His teachings <b>dominate</b> the New Testament—far more than Jesus' own words do.</p>
@@ -132,8 +133,8 @@
     </div>
     
     <div class="infographic">
-        <h3 class="infographic-title">Christianity or Paulianity?</h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <h3 class="infographic-title" style="margin-bottom: 0;">Christianity or Paulianity?</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6" style="margin-top: 1em;">
             <div class="bg-blue-50 p-4 rounded-lg">
                 <h4 class="font-bold text-center mb-3 text-blue-800">Jesus' Simple Message</h4>
                 <ul class="icon-list check-list">
@@ -177,5 +178,18 @@
     </div>
 
     <p>On to Part 3 where we look more closely at our biblical texts.</p>
+    
+    <nav class="navigation" style="text-align: center; margin-top: 2em; padding: 1em; border-top: 1px solid #eee;">
+        <button onclick="navigateToChapter('chapter5.xhtml', event)" style="margin: 0 0.5em; padding: 0.5em 1em; background: #007acc; color: white; border: none; border-radius: 4px; cursor: pointer;">← Backward</button>
+        <button onclick="navigateToChapter('toc.xhtml', event)" style="margin: 0 0.5em; padding: 0.5em 1em; background: #007acc; color: white; border: none; border-radius: 4px; cursor: pointer;">Contents</button>
+        <button onclick="navigateToChapter('chapter7.xhtml', event)" style="margin: 0 0.5em; padding: 0.5em 1em; background: #007acc; color: white; border: none; border-radius: 4px; cursor: pointer;">Forward →</button>
+    </nav>
+    
+    <script type="text/javascript">
+        function navigateToChapter(href, event) {
+            if (event) event.preventDefault();
+            window.location.href = href;
+        }
+    </script>
 </body>
 </html> 

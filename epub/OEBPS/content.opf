@@ -1,26 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<package version="3.0" unique-identifier="BookId" xmlns="http://www.idpf.org/2007/opf">
+<package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="BookId">
     <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier id="BookId">urn:uuid:1234567890</dc:identifier>
         <dc:title>Liberating Humanity: How Jesus Exposed the Evil God of Moses and Warned of Paul</dc:title>
-        <dc:creator>Ansilo Boff</dc:creator>
+        <meta property="title-type" refines="#title">main</meta>
+        <meta property="subtitle">Rediscovering Jesus' Subverted Teachings and the Father's Love</meta>
+        <dc:creator id="creator">Ansilo Boff</dc:creator>
+        <meta property="role" refines="#creator">aut</meta>
         <dc:language>en</dc:language>
-        <dc:identifier id="BookId">urn:uuid:28d0da50-5c9e-11eb-ae93-0242ac130002</dc:identifier>
-        <dc:date>2025-04-13</dc:date>
         <dc:publisher>Truth Beyond Tradition</dc:publisher>
-        <dc:rights>© Copyright 2025 - All rights reserved.</dc:rights>
-        <dc:subject>Religion</dc:subject>
-        <dc:subject>Christianity</dc:subject>
-        <dc:subject>Biblical Studies</dc:subject>
-        <dc:description>Rediscovering Jesus' Subverted Teachings and the Father's Love. A groundbreaking examination of the contrasts between Jesus' teachings and the Old Testament God, exploring how Jesus revealed a different divine nature than that portrayed in earlier scripture.</dc:description>
-        <meta property="dcterms:modified">2025-04-13T12:00:00Z</meta>
+        <dc:date>2025</dc:date>
+        <dc:rights>© 2025 Ansilo Boff. All rights reserved.</dc:rights>
         <meta name="cover" content="cover-image"/>
+        <meta property="dcterms:modified">2025-09-26T12:00:00Z</meta>
+        
+        <!-- Subject tags for discoverability -->
+        <dc:subject>Christian Deconstruction</dc:subject>
+        <dc:subject>Progressive Christianity</dc:subject>
+        <dc:subject>Bible Contradictions</dc:subject>
+        <dc:subject>Jesus vs Paul</dc:subject>
+        <dc:subject>Unconditional Love of God</dc:subject>
+        <dc:subject>Leaving Religion but Keeping</dc:subject>
     </metadata>
-    
+
     <manifest>
-        <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
-        <item id="style" href="styles.css" media-type="text/css"/>
+        <!-- Style -->
+        <item id="css" href="styles.css" media-type="text/css"/>
+        
+        <!-- Images -->
+        <item id="cover-image" href="cover.jpg" media-type="image/jpeg" properties="cover-image"/>
+        <item id="timeline" href="Timeline.jpg" media-type="image/jpeg"/>
+        <item id="unity" href="Unity.jpg" media-type="image/jpeg"/>
+        
+        <!-- XHTML Content -->
+        <item id="cover" href="title.xhtml" media-type="application/xhtml+xml"/>
         <item id="toc" href="toc.xhtml" media-type="application/xhtml+xml" properties="nav"/>
-        <item id="title" href="title.xhtml" media-type="application/xhtml+xml"/>
         <item id="copyright" href="copyright.xhtml" media-type="application/xhtml+xml"/>
         <item id="intro" href="intro.xhtml" media-type="application/xhtml+xml"/>
         <item id="part1" href="part1.xhtml" media-type="application/xhtml+xml"/>
@@ -39,13 +53,10 @@
         <item id="appendix2" href="appendix2.xhtml" media-type="application/xhtml+xml"/>
         <item id="appendix3" href="appendix3.xhtml" media-type="application/xhtml+xml"/>
         <item id="bibliography" href="bibliography.xhtml" media-type="application/xhtml+xml"/>
-        <item id="cover-image" href="cover.jpg" media-type="image/jpeg" properties="cover-image"/>
-        <item id="unity-image" href="Unity.jpg" media-type="image/jpeg"/>
-        <item id="timeline-image" href="timeline.jpg" media-type="image/jpeg"/>
     </manifest>
-    
-    <spine toc="ncx">
-        <itemref idref="title"/>
+
+    <spine>
+        <itemref idref="cover"/>
         <itemref idref="toc"/>
         <itemref idref="copyright"/>
         <itemref idref="intro"/>
@@ -66,4 +77,4 @@
         <itemref idref="appendix3"/>
         <itemref idref="bibliography"/>
     </spine>
-</package> 
+</package>

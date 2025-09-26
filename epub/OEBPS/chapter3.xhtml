@@ -5,13 +5,15 @@
     <link rel="stylesheet" type="text/css" href="styles.css"/>
 </head>
 <body>
-    <div class="chapter">
-        <h1>Chapter 3: Jesus' Father—A God of Love, Not Terror</h1>
-        <div class="content">
-            <div class="chapter-opening-quote">
-                <p>"Be merciful, just as your Father is merciful."</p>
-                <cite>—Jesus, Luke 6:36</cite>
-            </div>
+    <h2 id="chapter3" class="chapter-title">
+        <div class="chapter-number">Chapter 3</div>
+        Jesus' Father—A God of Love, Not Terror
+    </h2>
+    
+    <div class="chapter-opening-quote">
+        <p>"Be merciful, just as your Father is merciful."</p>
+        <cite>—Jesus, Luke 6:36</cite>
+    </div>
 
             <p>Jesus doesn't just tweak our theology—He <b>detonates it</b>. He calls God <i>Father</i>. Not a warrior. Not a judge. Not the deity of thunder and fire from Sinai. He doesn't use the distant, terrifying titles of Yahweh's past appearances. He uses <i>Abba</i>—an intimate, childlike word akin to Papa. That's not a minor shift. It's a <b>complete switch in divine identity</b>. Jesus doesn't just tell us what God is like. <b>He embodies Him.</b></p>
 
@@ -192,7 +194,18 @@
             <p>If Jesus fully reveals the Father, then <b>anything in the Old Testament that contradicts Him is suspect</b>.</p>
 
             <p>Which leaves us with only two possibilities: Either <b>Jesus' Father is not Yahweh</b> – implying that Yahweh was impersonating the true God of the Universe. Or Yahweh was the true God of the universe, but his true nature had been deliberately hidden, implying that all the horrible stuff written about him, a large part of the Old Testament, is wrong. <b>Either conclusion changes everything.</b> Let's examine more of Jesus' teachings about his Father.</p>
-        </div>
-    </div>
+    
+    <nav class="navigation" style="text-align: center; margin-top: 2em; padding: 1em; border-top: 1px solid #eee;">
+        <button onclick="navigateToChapter('chapter2.xhtml', event)" style="margin: 0 0.5em; padding: 0.5em 1em; background: #007acc; color: white; border: none; border-radius: 4px; cursor: pointer;">← Backward</button>
+        <button onclick="navigateToChapter('toc.xhtml', event)" style="margin: 0 0.5em; padding: 0.5em 1em; background: #007acc; color: white; border: none; border-radius: 4px; cursor: pointer;">Contents</button>
+        <button onclick="navigateToChapter('chapter4.xhtml', event)" style="margin: 0 0.5em; padding: 0.5em 1em; background: #007acc; color: white; border: none; border-radius: 4px; cursor: pointer;">Forward →</button>
+    </nav>
+    
+    <script type="text/javascript">
+        function navigateToChapter(href, event) {
+            if (event) event.preventDefault();
+            window.location.href = href;
+        }
+    </script>
 </body>
 </html> 

@@ -268,7 +268,7 @@ tr:nth-child(even) {
 
 .infographic-title {
     font-weight: bold;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
     color: #2d3748;
     text-align: center;
 }
@@ -1148,7 +1148,8 @@ b {
 .chapter-number {
     font-size: 1.25rem;
     color: var(--primary-color);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0;
+    display: inline;
 }
 
 nav {
@@ -1500,11 +1501,11 @@ p {
 }
 
 .comparison-table tr td:first-child {
-    background-color: #fff5f5;
+    background-color: white;
 }
 
 .comparison-table tr td:last-child {
-    background-color: #f0fff4;
+    background-color: white;
 }
 
 .comparison-table .section-header {

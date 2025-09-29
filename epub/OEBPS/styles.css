@@ -247,7 +247,12 @@ tr:nth-child(even) {
     flex: 1;
     min-width: 30%;
     margin: 1em;
-    page-break-inside: avoid;
+    padding: 1.5em;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    page-break-inside: auto;
 }
 
 .journey-title {

@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="BookId">
     <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
-        <dc:identifier id="BookId">urn:uuid:1234567890</dc:identifier>
         <dc:title>Liberating Humanity: How Jesus Exposed the Evil God of Moses and Warned of Paul</dc:title>
         <meta property="title-type" refines="#title">main</meta>
-        <meta property="subtitle">Rediscovering Jesus' Subverted Teachings and the Father's Love</meta>
+        <meta property="subtitle">Rediscovering Jesus’ Subverted Teachings and the Father’s Love</meta>
         <dc:creator id="creator">Ansilo Boff</dc:creator>
         <meta property="role" refines="#creator">aut</meta>
         <dc:language>en</dc:language>
@@ -52,6 +51,7 @@
         <item id="appendix1" href="appendix1.xhtml" media-type="application/xhtml+xml"/>
         <item id="appendix2" href="appendix2.xhtml" media-type="application/xhtml+xml"/>
         <item id="appendix3" href="appendix3.xhtml" media-type="application/xhtml+xml"/>
+        <item id="appendix4" href="appendix4.xhtml" media-type="application/xhtml+xml"/>
         <item id="bibliography" href="bibliography.xhtml" media-type="application/xhtml+xml"/>
     </manifest>
 
@@ -75,6 +75,7 @@
         <itemref idref="appendix1"/>
         <itemref idref="appendix2"/>
         <itemref idref="appendix3"/>
+        <itemref idref="appendix4"/>
         <itemref idref="bibliography"/>
     </spine>
 </package>

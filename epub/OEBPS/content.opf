@@ -28,8 +28,24 @@
         
         <!-- Images -->
         <item id="cover-image" href="cover.jpg" media-type="image/jpeg" properties="cover-image"/>
-        <item id="timeline" href="Timeline.jpg" media-type="image/jpeg"/>
+        <item id="timeline" href="timeline.jpg" media-type="image/jpeg"/>
         <item id="unity" href="Unity.jpg" media-type="image/jpeg"/>
+        <item id="c001-beersheba" href="c001-beersheba.jpg" media-type="image/jpeg"/>
+        <item id="c002-jehoiachin-age" href="c002-jehoiachin-age.jpg" media-type="image/jpeg"/>
+        <item id="c003-jesus-david-lineage" href="c003-jesus-david-lineage.jpg" media-type="image/jpeg"/>
+        <item id="c004-royal-disqualification" href="c004-royal-disqualification.jpg" media-type="image/jpeg"/>
+        <item id="c005-father-of-joseph" href="c005-father-of-joseph.jpg" media-type="image/jpeg"/>
+        <item id="c006-father-of-shelah" href="c006-father-of-shelah.jpg" media-type="image/jpeg"/>
+        <item id="c007-absalom" href="c007-absalom.jpg" media-type="image/jpeg"/>
+        <item id="cover-bible-contradictions" href="cover-bible-contradictions.jpg" media-type="image/jpeg"/>
+        <item id="framing-jesus-cover" href="framing-jesus-cover.jpg" media-type="image/jpeg"/>
+        <item id="hell-cover" href="Hell-cover01.jpg" media-type="image/jpeg"/>
+        <item id="reality-unveiled-cover" href="reality-unveiled-cover.jpg" media-type="image/jpeg"/>
+        <item id="table-mock-up" href="table-mock-up.jpg" media-type="image/jpeg"/>
+        <item id="thigh-mockup" href="thigh-mockup.jpg" media-type="image/jpeg"/>
+        <item id="when-my-little-brother" href="when-my-little-brother.jpg" media-type="image/jpeg"/>
+        <item id="whispers-to-my-daughter" href="whispers-to-my-daughter-from-dad-boff-hd.jpg" media-type="image/jpeg"/>
+        <item id="cover-mock-up" href="cover-mock-up.png" media-type="image/png"/>
         
         <!-- XHTML Content -->
         <item id="cover" href="title.xhtml" media-type="application/xhtml+xml"/>

@@ -238,17 +238,16 @@ tr:nth-child(even) {
 
 /* Journey boxes within infographic */
 .three-part-journey {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5em;
-    margin-top: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    page-break-inside: avoid;
 }
 
 .journey-box {
-    background-color: white;
-    padding: 1em;
-    border-radius: 0.3em;
-    border: 1px solid #e2e8f0;
+    flex: 1;
+    min-width: 30%;
+    margin: 1em;
+    page-break-inside: avoid;
 }
 
 .journey-title {

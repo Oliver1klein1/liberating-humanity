@@ -3,7 +3,7 @@
     <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
         <dc:title>Liberating Humanity: How Jesus Exposed the Evil God of Moses and Warned of Paul</dc:title>
         <meta property="title-type" refines="#title">main</meta>
-        <meta property="subtitle">Rediscovering Jesus’ Subverted Teachings and the Father’s Love</meta>
+        <meta property="subtitle">Rediscovering Jesus' Subverted Teachings and the Father's Love</meta>
         <dc:creator id="creator">Ansilo Boff</dc:creator>
         <meta property="role" refines="#creator">aut</meta>
         <dc:language>en</dc:language>
@@ -11,7 +11,7 @@
         <dc:date>2025</dc:date>
         <dc:rights>© 2025 Ansilo Boff. All rights reserved.</dc:rights>
         <meta name="cover" content="cover-image"/>
-        <meta property="dcterms:modified">2025-09-29T19:55:00Z</meta>
+        <meta property="dcterms:modified">2025-01-02T12:00:00Z</meta>
         
         <!-- Subject tags for discoverability -->
         <dc:subject>Christian Deconstruction</dc:subject>

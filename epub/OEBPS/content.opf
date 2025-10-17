@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="BookId">
     <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
-        <dc:title>Liberating Humanity: How Jesus Exposed the Evil God of Moses and Warned of Paul</dc:title>
+        <dc:title id="title">Liberating Humanity</dc:title>
         <meta property="title-type" refines="#title">main</meta>
-        <meta property="subtitle">Rediscovering Jesus' Subverted Teachings and the Father's Love</meta>
+        <meta property="subtitle">How Jesus Exposed The Evil God Of Moses And Warned Of Paul</meta>
         <dc:creator id="creator">Ansilo Boff</dc:creator>
         <meta property="role" refines="#creator">aut</meta>
         <dc:language>en</dc:language>
@@ -15,11 +15,13 @@
         
         <!-- Subject tags for discoverability -->
         <dc:subject>Christian Deconstruction</dc:subject>
-        <dc:subject>Progressive Christianity</dc:subject>
-        <dc:subject>Bible Contradictions</dc:subject>
-        <dc:subject>Jesus vs Paul</dc:subject>
-        <dc:subject>Unconditional Love of God</dc:subject>
-        <dc:subject>Leaving Religion but Keeping</dc:subject>
+        <dc:subject>Unconditional Love</dc:subject>
+        <dc:subject>Paul False</dc:subject>
+        <dc:subject>Yahweh Evil</dc:subject>
+        <dc:subject>Biblical Inerrancy</dc:subject>
+        <dc:subject>Animal Sacrifice</dc:subject>
+        <dc:subject>Original Sin</dc:subject>
+        <dc:subject>Atonement Evil</dc:subject>
     </metadata>
 
     <manifest>
@@ -43,9 +45,20 @@
         <item id="reality-unveiled-cover" href="reality-unveiled-cover.jpg" media-type="image/jpeg"/>
         <item id="table-mock-up" href="table-mock-up.jpg" media-type="image/jpeg"/>
         <item id="thigh-mockup" href="thigh-mockup.jpg" media-type="image/jpeg"/>
-        <item id="when-my-little-brother" href="when-my-little-brother.jpg" media-type="image/jpeg"/>
-        <item id="whispers-to-my-daughter" href="whispers-to-my-daughter-from-dad-boff-hd.jpg" media-type="image/jpeg"/>
         <item id="cover-mock-up" href="cover-mock-up.png" media-type="image/png"/>
+        
+        <!-- Father's Heart Series Book Covers -->
+        <item id="fh-book1-cover" href="fh-book1-cover.jpg" media-type="image/jpeg"/>
+        <item id="fh-book2-cover" href="fh-book2-cover.jpg" media-type="image/jpeg"/>
+        <item id="fh-book3-cover" href="fh-book3-cover.jpg" media-type="image/jpeg"/>
+        <item id="fh-book4-cover" href="fh-book4-cover.jpg" media-type="image/jpeg"/>
+        <item id="fh-book5-cover" href="fh-book5-cover.jpg" media-type="image/jpeg"/>
+        
+        <!-- Unspoken Hopes and Dreams Series Book Covers -->
+        <item id="b1-mum-son2" href="b1-mum-son2.jpg" media-type="image/jpeg"/>
+        <item id="b2-dad-son-cover" href="b2-dad-son-cover.jpg" media-type="image/jpeg"/>
+        <item id="b3-dad-daughter-cover" href="b3_dad_daughter_cover.jpg" media-type="image/jpeg"/>
+        <item id="b4-mum-daughter" href="b4-mum-daughter.jpg" media-type="image/jpeg"/>
         
         <!-- XHTML Content -->
         <item id="cover" href="title.xhtml" media-type="application/xhtml+xml"/>

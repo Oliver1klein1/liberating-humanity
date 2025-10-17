@@ -1,0 +1,8 @@
+﻿"Type","Description"
+"Error","E24010: Hyperlink not resolved in toc (One possible reason can be that the link points to a tag with style display:none):C:\Users\Michael\AppData\Local\Temp\ff7d8fa0-bb16-497c-8709-8e8a15a41e93\cTemp\mTemp\mbp_7E9_A_2_C_26_14_9D_88C_1A68_1\OEBPS\part1.xhtml#part1","","","",""
+"Error","E24001: The table of content could not be built.","","","",""
+"Notice","W14001: Hyperlink not resolved:  C:\Users\Michael\AppData\Local\Temp\ff7d8fa0-bb16-497c-8709-8e8a15a41e93\cTemp\mTemp\mbp_7E9_A_2_C_26_14_9D_88C_1A68_1\OEBPS\part1.xhtml#part1","","","",""
+"Notice","W14001: Hyperlink not resolved:  C:\Users\Michael\AppData\Local\Temp\ff7d8fa0-bb16-497c-8709-8e8a15a41e93\cTemp\mTemp\mbp_7E9_A_2_C_26_14_9D_88C_1A68_1\OEBPS\part2.xhtml#part2","","","",""
+"Notice","W14001: Hyperlink not resolved:  C:\Users\Michael\AppData\Local\Temp\ff7d8fa0-bb16-497c-8709-8e8a15a41e93\cTemp\mTemp\mbp_7E9_A_2_C_26_14_9D_88C_1A68_1\OEBPS\part3.xhtml#part3","","","",""
+"Notice","W14002: Some hyperlinks could not be resolved.","","","",""
+"Status","Book conversion failed."

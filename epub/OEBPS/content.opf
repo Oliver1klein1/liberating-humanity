@@ -46,6 +46,37 @@
         <item id="table-mock-up" href="table-mock-up.jpg" media-type="image/jpeg"/>
         <item id="thigh-mockup" href="thigh-mockup.jpg" media-type="image/jpeg"/>
         <item id="cover-mock-up" href="cover-mock-up.png" media-type="image/png"/>
+        <item id="sticks" href="sticks.jpg" media-type="image/jpeg"/>
+        <item id="baby" href="baby.jpg" media-type="image/jpeg"/>
+        <item id="bread" href="bread.jpg" media-type="image/jpeg"/>
+        <item id="snakes7" href="snakes7.jpg" media-type="image/jpeg"/>
+        <item id="primacy_effect" href="primacy_effect.jpg" media-type="image/jpeg"/>
+        <item id="inconsistency_discounting" href="inconsistency_discounting.jpg" media-type="image/jpeg"/>
+        <item id="identity_fusion02" href="identity_fusion02.jpg" media-type="image/jpeg"/>
+        <item id="blood-and-money" href="blood_and_money.jpg" media-type="image/jpeg"/>
+        <item id="scroll" href="scroll.jpg" media-type="image/jpeg"/>
+        <item id="stone-tablets" href="stone_tablets.jpg" media-type="image/jpeg"/>
+        <item id="abraham-sacrificing" href="abraham_sacrificing.jpg" media-type="image/jpeg"/>
+        <item id="doorposts-lintels" href="doorposts_and_lintels.jpg" media-type="image/jpeg"/>
+        <item id="brain-programming" href="brain-programming.jpg" media-type="image/jpeg"/>
+        <item id="weapon" href="weapon.jpg" media-type="image/jpeg"/>
+        <item id="yahweh-vs-jesus-father" href="yahweh_vs_jesus_father.jpg" media-type="image/jpeg"/>
+        <item id="paul7" href="paul7.jpg" media-type="image/jpeg"/>
+        <item id="heart3" href="heart3.jpg" media-type="image/jpeg"/>
+        <item id="pot" href="pot.jpg" media-type="image/jpeg"/>
+        <item id="fire-samaria" href="fire_samaria.jpg" media-type="image/jpeg"/>
+        <item id="brazen-altar" href="brazen-altar.jpg" media-type="image/jpeg"/>
+        <item id="god-does-not-change" href="god_does_not_change.jpg" media-type="image/jpeg"/>
+        <item id="darkness" href="darkness.jpg" media-type="image/jpeg"/>
+        <item id="moses-burning-bush" href="moses-burning-bush.jpg" media-type="image/jpeg"/>
+        <item id="moses-rock" href="moses_rock.jpg" media-type="image/jpeg"/>
+        <item id="oathtaking" href="oathtaking.jpg" media-type="image/jpeg"/>
+        <item id="oaths-and-jesus3" href="oaths_and_jesus3.jpg" media-type="image/jpeg"/>
+        <item id="jesus-teachings-vs-pauls-teachings" href="jesus-teachings-vs-pauls-teachings.jpg" media-type="image/jpeg"/>
+        <item id="paul-foundations-bw" href="paul-foundations_bw.jpg" media-type="image/jpeg"/>
+        <item id="c097-paul-apostleship" href="c097-paul-apostleship.jpg" media-type="image/jpeg"/>
+        <item id="ink-parchment" href="ink-parchment.jpg" media-type="image/jpeg"/>
+        <item id="wedding-rings" href="wedding_rings.jpg" media-type="image/jpeg"/>
         
         <!-- Father's Heart Series Book Covers -->
         <item id="fh-book1-cover" href="fh-book1-cover.jpg" media-type="image/jpeg"/>
@@ -77,6 +108,7 @@
         <item id="part3" href="part3.xhtml" media-type="application/xhtml+xml"/>
         <item id="chapter8" href="chapter8.xhtml" media-type="application/xhtml+xml"/>
         <item id="chapter9" href="chapter9.xhtml" media-type="application/xhtml+xml"/>
+        <item id="chapter10" href="chapter10.xhtml" media-type="application/xhtml+xml"/>
         <item id="appendix1" href="appendix1.xhtml" media-type="application/xhtml+xml"/>
         <item id="appendix2" href="appendix2.xhtml" media-type="application/xhtml+xml"/>
         <item id="appendix3" href="appendix3.xhtml" media-type="application/xhtml+xml"/>
@@ -101,6 +133,7 @@
         <itemref idref="part3"/>
         <itemref idref="chapter8"/>
         <itemref idref="chapter9"/>
+        <itemref idref="chapter10"/>
         <itemref idref="appendix1"/>
         <itemref idref="appendix2"/>
         <itemref idref="appendix3"/>

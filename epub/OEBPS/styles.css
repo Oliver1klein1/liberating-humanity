@@ -50,9 +50,10 @@ main {
 }
 
 .main-title {
-    font-size: 3rem;
+    font-size: 4.5rem;
     font-weight: bold;
     color: var(--primary-color);
+    margin-top: 8rem;
     margin-bottom: 2rem;
 }
 
@@ -171,7 +172,37 @@ tr:nth-child(even) {
 }
 
 /* Boxes and Callouts */
-.callout, .note, .infographic {
+.callout {
+    margin: 2em auto;
+    padding: 1.5em;
+    background-color: #e3f2fd;
+    border-left: 4px solid #2c5282;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    border-radius: 8px;
+    max-width: 90%;
+    font-style: italic;
+    font-family: 'Georgia', serif;
+}
+
+.callout p {
+    margin: 0 0 1em 0;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    text-align: left;
+}
+
+.callout .quote-author,
+.callout cite {
+    display: block;
+    text-align: right;
+    font-size: 0.9rem;
+    margin-top: 0.5em;
+    font-style: italic;
+}
+
+.note, .infographic {
     margin: 2em auto;
     padding: 1.5em;
     background-color: #f8f9fa;
@@ -296,13 +327,31 @@ tr:nth-child(even) {
     color: var(--primary-color);
     margin-bottom: 3rem;
     padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .chapter-number {
     display: block;
-    font-size: 1.2em;
+    font-size: 1.8em;
+    font-weight: bold;
     color: var(--primary-color);
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.chapter-title > .chapter-number + *,
+.chapter-title-text {
+    margin-top: 0;
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+.chapter-title-text {
+    font-size: 2.5rem;
+    font-weight: bold;
 }
 
 /* Scripture Quotes */
@@ -819,9 +868,16 @@ a:hover {
     text-align: center;
 }
 
-.atrocity-box p {
+.atrocity-box,
+.callout.atrocity-box {
+    font-style: normal !important;
+}
+
+.atrocity-box p,
+.callout.atrocity-box p {
     color: #2d3748;
     line-height: 1.6;
+    font-style: normal !important;
 }
 
 /* Manuscript boxes */
@@ -1018,14 +1074,30 @@ u {
 .bible-quote {
     margin: 2em 0;
     padding: 1.5em;
-    background-color: #f8f9fa;
-    border-left: 4px solid #4a5568;
+    background-color: #e3f2fd;
+    border-left: 4px solid #2c5282;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    border-radius: 8px;
     font-style: italic;
+    font-family: 'Georgia', serif;
 }
 
 .bible-quote p {
-    margin: 0;
+    margin: 0 0 1em 0;
     line-height: 1.6;
+    font-size: 1.1rem;
+    text-align: left;
+}
+
+.bible-quote .quote-author,
+.bible-quote cite {
+    display: block;
+    text-align: right;
+    font-size: 0.9rem;
+    margin-top: 0.5em;
+    font-style: italic;
 }
 
 .quote {
@@ -1244,12 +1316,17 @@ nav a:hover {
 }
 
 /* Override any conflicting styles */
-.quote p, .scripture-quote p, .key-point p, .callout p {
+.quote p, .scripture-quote p, .key-point p {
     margin: 0;
     padding: 0;
     color: #2d3748;
     line-height: 1.6;
     font-style: normal;
+}
+
+/* Callout paragraphs should be italic */
+.callout p {
+    font-style: italic;
 }
 
 /* Remove conflicting quote decorations */
@@ -1430,28 +1507,36 @@ p {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    background: none !important;
-    border: none !important;
+    background-color: #e3f2fd !important;
+    border-left: 4px solid #2c5282 !important;
+    border-top: none !important;
+    border-right: none !important;
+    border-bottom: none !important;
+    border-radius: 8px !important;
+    font-family: 'Georgia', serif !important;
     box-shadow: none !important;
 }
 
 .chapter-opening-quote p {
-    font-size: 1.5em !important;
+    font-size: 1.3em !important;
     font-weight: normal !important;
     line-height: 1.6 !important;
-    margin: 0 !important;
+    margin: 0 0 1em 0 !important;
     padding: 0 !important;
-    color: #2c5282 !important;
+    color: #2d3748 !important;
     max-width: 90% !important;
-    font-style: normal !important;
+    font-style: italic !important;
+    text-align: left !important;
 }
 
-.chapter-opening-quote cite {
+.chapter-opening-quote cite,
+.chapter-opening-quote .quote-author {
     display: block !important;
-    margin-top: 1em !important;
-    font-size: 0.9em !important;
+    margin-top: 0.5em !important;
+    font-size: 0.9rem !important;
     font-style: italic !important;
     color: #2d3748 !important;
+    text-align: right !important;
     align-self: flex-end !important;
     margin-right: 5% !important;
 }
@@ -1461,10 +1546,13 @@ p {
     display: none !important;
 }
 
-.quote p, .scripture-quote p, .bible-quote p, .callout p, 
-.quote .italic, .scripture-quote .italic, .bible-quote .italic, .callout .italic,
-.chapter-opening-quote p, .chapter-opening-quote .italic {
+.quote p, .scripture-quote p, .key-point p {
     font-style: normal !important;
+}
+
+/* Bible quotes and callouts should be italic */
+.bible-quote p, .callout p {
+    font-style: italic !important;
 }
 
 .quote-author, .scripture-quote cite, .opening-quote cite {
@@ -1618,4 +1706,644 @@ p {
 .glossary dd {
     margin-left: 1em;
     margin-bottom: 1.5em;
+}
+
+/* ============================================
+   PRINT STYLES - 6x9 INCH PAPERBACK (B&W)
+   ============================================ */
+
+@media print {
+    /* Page setup for 6x9 inch paperback */
+    @page {
+        size: 6in 9in;
+        margin: 0.75in 0.875in; /* Top/bottom: 0.75in, Left/right: 0.875in (larger for binding/gutter) */
+        /* Note: For bound books, manually set inside margin to 0.875in and outside to 0.625in in print dialog */
+    }
+    
+    /* Base print styles - black text on white */
+    body {
+        background: #fff !important;
+        color: #000 !important;
+        font-family: 'Georgia', 'Times New Roman', Times, serif;
+        font-size: 11pt;
+        line-height: 1.6;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        text-align: justify;
+    }
+    
+    /* NUCLEAR OPTION: Hide ALL navigation elements and classes */
+    .navigation,
+    nav.navigation,
+    nav[class="navigation"],
+    nav[class*="navigation"],
+    [class*="navigation"],
+    nav[class*="navigation"]:not([epub:type="toc"]) {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        height: 0 !important;
+        width: 0 !important;
+        overflow: hidden !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        border: none !important;
+        position: absolute !important;
+        left: -9999px !important;
+    }
+    
+    /* Hide ALL nav elements except TOC content */
+    nav:not([epub:type="toc"]) {
+        display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+        overflow: hidden !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    /* Allow ONLY TOC content nav to display */
+    nav[epub:type="toc"] {
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    /* Hide ALL links inside ANY navigation element (override inline styles) */
+    .navigation a,
+    nav.navigation a,
+    nav[class="navigation"] a,
+    nav:not([epub:type="toc"]) a,
+    [class="navigation"] a,
+    [class*="navigation"] a {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        height: 0 !important;
+        width: 0 !important;
+        overflow: hidden !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        position: absolute !important;
+        left: -9999px !important;
+    }
+    
+    /* Override inline styles on navigation links - target all links with inline display styles */
+    .navigation a[style],
+    nav.navigation a[style],
+    [class="navigation"] a[style],
+    [class*="navigation"] a[style] {
+        display: none !important;
+        visibility: hidden !important;
+        /* Force override any inline display property */
+    }
+    
+    /* Additional catch-all for any remaining navigation elements */
+    body nav:not([epub:type="toc"]),
+    body .navigation,
+    body nav.navigation {
+        display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+        overflow: hidden !important;
+    }
+    
+    /* Preserve TOC content */
+    nav[epub:type="toc"],
+    nav[epub:type="toc"] *,
+    nav[epub:type="toc"] h1,
+    nav[epub:type="toc"] ol,
+    nav[epub:type="toc"] li,
+    nav[epub:type="toc"] a {
+        display: block !important;
+        color: #000 !important;
+    }
+    
+    nav[epub:type="toc"] h1 {
+        font-size: 18pt !important;
+        font-weight: bold !important;
+        margin-bottom: 1em !important;
+        border-bottom: 2px solid #000 !important;
+        padding-bottom: 0.5em !important;
+    }
+    
+    nav[epub:type="toc"] ol {
+        list-style: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    nav[epub:type="toc"] li {
+        margin: 0.4em 0 !important;
+    }
+    
+    /* Convert TOC links to plain text for print */
+    nav[epub:type="toc"] a {
+        text-decoration: none !important;
+        padding: 0.3em 0 !important;
+        border-left: none !important;
+        background: transparent !important;
+        display: block !important;
+        color: #000 !important;
+    }
+    
+    /* TOC page body styling - ensure content displays */
+    body {
+        max-width: 100% !important;
+    }
+    
+    /* Convert all text colors to black */
+    * {
+        color: #000 !important;
+    }
+    
+    /* Preserve white backgrounds, remove colored backgrounds */
+    body, html {
+        background: #fff !important;
+    }
+    
+    /* Preserve background for callouts/boxes using borders */
+    .callout,
+    .bible-quote,
+    .chapter-opening-quote {
+        background: #f0f0f0 !important; /* Light gray for print */
+        border: none !important;
+        border-left: 4px solid #000 !important; /* Black border for print */
+        border-radius: 8px !important;
+        padding: 0.75rem 1rem !important;
+        margin-top: 0.5rem !important; /* Reduced top margin to allow starting on previous page */
+        margin-bottom: 1rem !important;
+        page-break-inside: auto !important;
+        page-break-before: auto !important; /* Allow callout to start on previous page if space allows */
+        color: #000 !important;
+        font-style: italic !important;
+    }
+    
+    .note,
+    .key-insight,
+    .highlight {
+        background: #fff !important;
+        border: 1px solid #000 !important;
+        border-left: 4px solid #000 !important;
+        padding: 0.75rem 1rem !important;
+        margin-top: 0.5rem !important; /* Reduced top margin to avoid forcing new page */
+        margin-bottom: 0.5rem !important;
+        page-break-inside: auto !important; /* Allow notes to break across pages */
+        page-break-before: auto !important; /* Don't force new page before note */
+        color: #000 !important;
+    }
+    
+    /* Remove colored backgrounds, use borders instead */
+    .atrocity-box,
+    .comparison-table,
+    .infographic,
+    [style*="background-color"],
+    [style*="background:"] {
+        background: #fff !important;
+        border: 1px solid #000 !important;
+        page-break-inside: auto !important; /* Allow cards to break across pages */
+    }
+    
+    /* Preserve rounded corners - border-radius from inline styles should be preserved automatically
+       Inline styles have the highest CSS specificity, so border-radius values like "8px" from 
+       inline style attributes will be respected in print by modern browsers */
+    
+    /* Allow page breaks within nested boxes inside cards */
+    div[style*="background-color"][style*="padding"] div[style*="background-color"] {
+        page-break-inside: auto !important;
+    }
+    
+    /* Allow breaks in flex containers inside cards */
+    div[style*="background-color"] div[style*="display: flex"],
+    div[style*="background:"] div[style*="display: flex"] {
+        page-break-inside: auto !important;
+    }
+    
+    /* Allow breaks in flex items inside cards */
+    div[style*="background-color"] div[style*="flex:"],
+    div[style*="background:"] div[style*="flex:"] {
+        page-break-inside: auto !important;
+    }
+    
+    /* Typography for print */
+    h1, h2, h3, h4, h5, h6 {
+        color: #000 !important;
+        page-break-after: avoid;
+        page-break-inside: avoid;
+        margin-top: 1.2em;
+        margin-bottom: 0.6em;
+    }
+    
+    h1, .chapter-title, .main-title {
+        font-size: 18pt;
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    h2 {
+        font-size: 16pt;
+        font-weight: bold;
+    }
+    
+    h3, .section-title {
+        font-size: 14pt;
+        font-weight: bold;
+    }
+    
+    h4 {
+        font-size: 12pt;
+        font-weight: bold;
+    }
+    
+    /* Paragraphs and text */
+    p {
+        page-break-inside: avoid;
+        orphans: 3;
+        widows: 3;
+        margin-bottom: 0.5em;
+        color: #000 !important;
+    }
+    
+    /* Allow breaks in paragraphs inside cards/boxes to improve page flow */
+    div[style*="background-color"] p,
+    div[style*="background:"] p {
+        page-break-inside: auto !important;
+        orphans: 2 !important;
+        widows: 2 !important;
+    }
+    
+    /* Allow headings in cards to break, but keep heading with first paragraph */
+    div[style*="background-color"] h3,
+    div[style*="background-color"] h4,
+    div[style*="background:"] h3,
+    div[style*="background:"] h4 {
+        page-break-after: avoid !important;
+    }
+    
+    /* Preserve emphasis styles but in black */
+    b, strong, .font-bold {
+        font-weight: bold !important;
+        color: #000 !important;
+    }
+    
+    i, em, .font-italic {
+        font-style: italic !important;
+        color: #000 !important;
+    }
+    
+    /* Images - convert to grayscale, optimize sizing */
+    img {
+        /* Don't override inline max-width - allow inline styles to control sizing */
+        height: auto !important;
+        page-break-inside: avoid;
+        display: block;
+        margin: 0.75rem auto;
+        filter: grayscale(100%);
+        -webkit-filter: grayscale(100%);
+    }
+    
+    /* If no inline max-width is set, default to 100% */
+    img[style*="max-width"] {
+        /* Respect inline max-width styles */
+    }
+    
+    /* Quotes and callouts */
+    .bible-quote,
+    .chapter-opening-quote {
+        font-style: italic;
+        border-left: 4px solid #000 !important;
+        padding: 0.75rem 1rem !important;
+        margin: 1rem 0 !important;
+        background: #fff !important;
+        page-break-inside: avoid;
+        color: #000 !important;
+    }
+    
+    .quote-author,
+    .quote-attribution,
+    .reference {
+        font-size: 9pt;
+        font-style: italic;
+        color: #000 !important;
+        display: block;
+        margin-top: 0.5rem;
+        text-align: right;
+    }
+    
+    /* Lists */
+    ul, ol {
+        page-break-inside: auto;
+        margin: 0.5em 0;
+        padding-left: 1.5em;
+    }
+    
+    li {
+        page-break-inside: avoid;
+        orphans: 2;
+        widows: 2;
+        margin-bottom: 0.3em;
+        color: #000 !important;
+    }
+    
+    /* Allow breaks in lists inside cards/boxes */
+    div[style*="background-color"] ul,
+    div[style*="background-color"] ol,
+    div[style*="background:"] ul,
+    div[style*="background:"] ol {
+        page-break-inside: auto !important;
+    }
+    
+    /* Allow breaks in list items inside cards, but keep individual items together */
+    div[style*="background-color"] li,
+    div[style*="background:"] li {
+        page-break-inside: avoid !important;
+        orphans: 1 !important;
+        widows: 1 !important;
+    }
+    
+    /* Tables */
+    table {
+        page-break-inside: auto;
+        border-collapse: collapse;
+        width: 100%;
+        margin: 1rem 0;
+    }
+    
+    tr {
+        page-break-inside: avoid;
+    }
+    
+    th, td {
+        border: 1px solid #000 !important;
+        padding: 0.4rem;
+        text-align: left;
+        color: #000 !important;
+        background: #fff !important;
+    }
+    
+    th {
+        font-weight: bold;
+        background: #f5f5f5 !important;
+    }
+    
+    /* Chapter headers */
+    .chapter-header,
+    .chapter-title {
+        page-break-before: always;
+        page-break-after: avoid;
+        margin-top: 0;
+        margin-bottom: 1em;
+    }
+    
+    .chapter-number {
+        font-size: 16pt !important;
+        font-weight: bold !important;
+        color: #000 !important;
+        margin-bottom: 0.5rem !important;
+        text-align: center !important;
+        display: block !important;
+    }
+    
+    .chapter-title {
+        display: block !important;
+        text-align: center !important;
+    }
+    
+    .chapter-title > .chapter-number + *,
+    .chapter-title-text {
+        display: block !important;
+        margin-top: 0 !important;
+        text-align: center !important;
+        width: 100% !important;
+    }
+    
+    .chapter-title-text {
+        font-size: 20pt !important;
+        font-weight: bold !important;
+    }
+    
+    /* Part pages */
+    .part-title,
+    [id^="part"] {
+        page-break-before: always;
+        page-break-after: avoid;
+    }
+    
+    /* Fix part pages with flexbox and min-height - override inline styles */
+    div[style*="display: flex"] {
+        display: block !important;
+        min-height: auto !important;
+        height: auto !important;
+        padding: 1rem 0 !important;
+        padding-top: 2rem !important;
+        background: #fff !important;
+        page-break-inside: avoid !important;
+    }
+    
+    div[style*="min-height: 100vh"] {
+        min-height: auto !important;
+        height: auto !important;
+    }
+    
+    /* Ensure part page content displays */
+    div[style*="display: flex"] > div {
+        display: block !important;
+        margin: 0 auto !important;
+        padding: 1rem !important;
+        page-break-inside: avoid !important;
+    }
+    
+    /* Prevent page break between PART label and title on part pages */
+    div[style*="margin: 3rem 0"],
+    div[style*="margin: 3rem"] {
+        page-break-inside: avoid !important;
+    }
+    
+    /* Keep PART number and title together */
+    div[style*="font-size: 1.5rem"][style*="PART"],
+    h1[id^="part"],
+    h1[id*="part"] {
+        page-break-after: avoid !important;
+        page-break-inside: avoid !important;
+    }
+    
+    /* Container holding PART label and title - keep together */
+    body > div[style*="display: flex"] > div > div[style*="margin: 3rem"] {
+        page-break-inside: avoid !important;
+    }
+    
+    /* Title page - fix for print */
+    .title-page {
+        min-height: auto !important;
+        height: auto !important;
+        display: block !important;
+        padding: 2rem 0 !important;
+        page-break-after: always;
+    }
+    
+    .title-page .main-title {
+        display: block !important;
+        text-align: center !important;
+        font-size: 36pt !important;
+        font-weight: bold !important;
+        margin-top: 2.5in !important;
+        margin-bottom: 2rem !important;
+        color: #000 !important;
+    }
+    
+    .title-page .subtitle,
+    .title-page .subtitle-2,
+    .title-page .author-name {
+        display: block !important;
+        text-align: center !important;
+        margin: 1rem 0 !important;
+        color: #000 !important;
+    }
+    
+    .title-page .cover-image {
+        display: block !important;
+        text-align: center !important;
+        margin: 1rem auto !important;
+        max-width: 100% !important;
+    }
+    
+    /* Copyright page - fix for print */
+    .copyright-page {
+        min-height: auto !important;
+        height: auto !important;
+        display: block !important;
+        padding: 2rem 0 !important;
+    }
+    
+    /* Prevent page breaks in key sections */
+    .note,
+    .callout-title,
+    .key-insight-title {
+        page-break-after: avoid;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    /* Keep note titles with their following content */
+    .note-title {
+        page-break-after: avoid !important;
+        orphans: 2 !important;
+        widows: 2 !important;
+    }
+    
+    /* Ensure note paragraphs stay with their title */
+    .note .note-title + p {
+        page-break-before: avoid !important;
+        orphans: 3 !important;
+        widows: 3 !important;
+    }
+    
+    /* Links - show URL in print */
+    a {
+        color: #000 !important;
+        text-decoration: underline;
+    }
+    
+    a[href^="http"]:after,
+    a[href^="www"]:after {
+        content: " (" attr(href) ")";
+        font-size: 8pt;
+        color: #666 !important;
+    }
+    
+    /* Drop caps */
+    .drop-cap {
+        float: left;
+        font-size: 3em;
+        line-height: 0.8;
+        padding-right: 0.1em;
+        color: #000 !important;
+    }
+    
+    /* Hide screen-only elements */
+    .no-print,
+    .screen-only {
+        display: none !important;
+    }
+    
+    /* Ensure proper spacing for print */
+    .divider {
+        border-top: 2px solid #000 !important;
+        margin: 1.5em 0;
+    }
+    
+    /* Boxes with colored backgrounds - convert to borders */
+    [style*="background-color: #"],
+    [style*="background: #"],
+    [style*="background-color"],
+    [style*="background:"] {
+        background: #fff !important;
+        border: 1px solid #000 !important;
+    }
+    
+    /* Ensure horizontal rules print */
+    hr {
+        border: none !important;
+        border-top: 2px solid #000 !important;
+        height: 2px !important;
+        margin: 1rem auto !important;
+        display: block !important;
+    }
+    
+    /* Comparison tables and infographics */
+    .comparison-table td,
+    .comparison-table th {
+        border: 1px solid #000 !important;
+        background: #fff !important;
+        color: #000 !important;
+    }
+    
+    /* Ensure all inline styles with colors are converted */
+    [style*="color:"] {
+        color: #000 !important;
+    }
+    
+    /* FINAL CATCH-ALL: Hide any navigation that might have slipped through */
+    /* This rule should be last to override anything else - maximum specificity */
+    body nav.navigation,
+    body .navigation,
+    body nav[class="navigation"],
+    html body nav.navigation,
+    html body .navigation {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        height: 0 !important;
+        width: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: hidden !important;
+        position: absolute !important;
+        left: -9999px !important;
+        clip: rect(0, 0, 0, 0) !important;
+    }
+    
+    /* Hide ALL children of navigation elements */
+    body .navigation *,
+    body nav.navigation *,
+    body nav[class="navigation"] * {
+        display: none !important;
+        visibility: hidden !important;
+    }
+    
+    /* Exception: Only allow TOC content nav - must come after hiding rules */
+    nav[epub:type="toc"] {
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    /* Preserve TOC links - must be after the .navigation * rule */
+    nav[epub:type="toc"] * {
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    nav[epub:type="toc"] a {
+        display: block !important;
+        visibility: visible !important;
+    }
 } 

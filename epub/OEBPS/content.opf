@@ -11,17 +11,19 @@
         <dc:date>2025</dc:date>
         <dc:rights>© 2025 Ansilo Boff. All rights reserved.</dc:rights>
         <meta name="cover" content="cover-image"/>
-        <meta property="dcterms:modified">2025-01-02T12:00:00Z</meta>
+        <meta property="dcterms:modified">2025-01-27T12:00:00Z</meta>
+        <dc:description>Book 1 of the "Rediscover Jesus Subverted Teachings And The Father's Love" Series, Liberating Humanity exposes the contradictions between Yahweh … the Old Testament deity who demanded sacrifice, commanded genocide, and dwelled in darkness … and the Father Jesus revealed: a God of unconditional love, mercy, and unapproachable light. Through forensic analysis of Scripture, this book reveals how Jesus' teachings directly contradicted Yahweh's commands, how Paul's theology diverged from Jesus' message, and how biblical texts may have been altered to preserve the sacrificial system that Jesus rejected.</dc:description>
         
         <!-- Subject tags for discoverability -->
-        <dc:subject>Christian Deconstruction</dc:subject>
-        <dc:subject>Unconditional Love</dc:subject>
-        <dc:subject>Paul False</dc:subject>
-        <dc:subject>Yahweh Evil</dc:subject>
-        <dc:subject>Biblical Inerrancy</dc:subject>
-        <dc:subject>Animal Sacrifice</dc:subject>
-        <dc:subject>Original Sin</dc:subject>
-        <dc:subject>Atonement Evil</dc:subject>
+        <dc:subject>bible contradictions</dc:subject>
+        <dc:subject>biblical inerrancy</dc:subject>
+        <dc:subject>Jesus vs Paul</dc:subject>
+        <dc:subject>textual criticism</dc:subject>
+        <dc:subject>Yahweh vs Jesus</dc:subject>
+        <dc:subject>Old Testament God</dc:subject>
+        <dc:subject>atonement</dc:subject>
+        <dc:subject>original sin</dc:subject>
+        <dc:subject>Christian deconstruction</dc:subject>
     </metadata>
 
     <manifest>
@@ -57,7 +59,6 @@
         <item id="scroll" href="scroll.jpg" media-type="image/jpeg"/>
         <item id="stone-tablets" href="stone_tablets.jpg" media-type="image/jpeg"/>
         <item id="abraham-sacrificing" href="abraham_sacrificing.jpg" media-type="image/jpeg"/>
-        <item id="doorposts-lintels" href="doorposts_and_lintels.jpg" media-type="image/jpeg"/>
         <item id="brain-programming" href="brain-programming.jpg" media-type="image/jpeg"/>
         <item id="weapon" href="weapon.jpg" media-type="image/jpeg"/>
         <item id="yahweh-vs-jesus-father" href="yahweh_vs_jesus_father.jpg" media-type="image/jpeg"/>
@@ -77,6 +78,7 @@
         <item id="c097-paul-apostleship" href="c097-paul-apostleship.jpg" media-type="image/jpeg"/>
         <item id="ink-parchment" href="ink-parchment.jpg" media-type="image/jpeg"/>
         <item id="wedding-rings" href="wedding_rings.jpg" media-type="image/jpeg"/>
+        
         
         <!-- Father's Heart Series Book Covers -->
         <item id="fh-book1-cover" href="fh-book1-cover.jpg" media-type="image/jpeg"/>

@@ -1712,6 +1712,26 @@ p {
    PRINT STYLES - 6x9 INCH PAPERBACK (B&W)
    ============================================ */
 
+/* Hide navigation buttons for Kindle/KDP - applies to all media */
+nav.navigation,
+.navigation,
+nav[class="navigation"],
+nav[class*="navigation"]:not([epub:type="toc"]) {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.navigation a,
+nav.navigation a,
+nav[class="navigation"] a {
+    display: none !important;
+    visibility: hidden !important;
+}
+
 @media print {
     /* Page setup for 6x9 inch paperback */
     @page {

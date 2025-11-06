@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="BookId">
     <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier id="BookId">urn:uuid:ae7a315c-6f19-4e83-9c2e-a2de85f7e8b9</dc:identifier>
         <dc:title id="title">Liberating Humanity</dc:title>
         <meta property="title-type" refines="#title">main</meta>
-        <meta property="subtitle">How Jesus Exposed The Evil God Of Moses And Warned Of Paul</meta>
+        <dc:title id="subtitle">How Jesus Exposed The Evil God Of Moses And Warned Of Paul</dc:title>
+        <meta property="title-type" refines="#subtitle">subtitle</meta>
         <dc:creator id="creator">Ansilo Boff</dc:creator>
         <meta property="role" refines="#creator">aut</meta>
         <dc:language>en</dc:language>
@@ -11,7 +13,7 @@
         <dc:date>2025</dc:date>
         <dc:rights>© 2025 Ansilo Boff. All rights reserved.</dc:rights>
         <meta name="cover" content="cover-image"/>
-        <meta property="dcterms:modified">2025-01-27T12:00:00Z</meta>
+        <meta property="dcterms:modified">2025-11-06T12:00:00Z</meta>
         <dc:description>Book 1 of the "Rediscover Jesus Subverted Teachings And The Father's Love" Series, Liberating Humanity exposes the contradictions between Yahweh … the Old Testament deity who demanded sacrifice, commanded genocide, and dwelled in darkness … and the Father Jesus revealed: a God of unconditional love, mercy, and unapproachable light. Through forensic analysis of Scripture, this book reveals how Jesus' teachings directly contradicted Yahweh's commands, how Paul's theology diverged from Jesus' message, and how biblical texts may have been altered to preserve the sacrificial system that Jesus rejected.</dc:description>
         
         <!-- Subject tags for discoverability -->
@@ -34,6 +36,7 @@
         <item id="cover-image" href="cover.jpg" media-type="image/jpeg" properties="cover-image"/>
         <item id="timeline" href="timeline.jpg" media-type="image/jpeg"/>
         <item id="unity" href="Unity.jpg" media-type="image/jpeg"/>
+        <item id="tbt-publishing" href="tbt_publishing.jpg" media-type="image/jpeg"/>
         <item id="c001-beersheba" href="c001-beersheba.jpg" media-type="image/jpeg"/>
         <item id="c002-jehoiachin-age" href="c002-jehoiachin-age.jpg" media-type="image/jpeg"/>
         <item id="c003-jesus-david-lineage" href="c003-jesus-david-lineage.jpg" media-type="image/jpeg"/>
@@ -45,9 +48,7 @@
         <item id="framing-jesus-cover" href="framing-jesus-cover.jpg" media-type="image/jpeg"/>
         <item id="hell-cover" href="Hell-cover01.jpg" media-type="image/jpeg"/>
         <item id="reality-unveiled-cover" href="reality-unveiled-cover.jpg" media-type="image/jpeg"/>
-        <item id="table-mock-up" href="table-mock-up.jpg" media-type="image/jpeg"/>
-        <item id="thigh-mockup" href="thigh-mockup.jpg" media-type="image/jpeg"/>
-        <item id="cover-mock-up" href="cover-mock-up.png" media-type="image/png"/>
+        <item id="rediscover-boxed-set" href="rediscover_boxed_set_final2.jpg" media-type="image/jpeg"/>
         <item id="sticks" href="sticks.jpg" media-type="image/jpeg"/>
         <item id="baby" href="baby.jpg" media-type="image/jpeg"/>
         <item id="bread" href="bread.jpg" media-type="image/jpeg"/>
@@ -58,6 +59,7 @@
         <item id="blood-and-money" href="blood_and_money.jpg" media-type="image/jpeg"/>
         <item id="scroll" href="scroll.jpg" media-type="image/jpeg"/>
         <item id="stone-tablets" href="stone_tablets.jpg" media-type="image/jpeg"/>
+        <item id="doorposts-and-lintels" href="doorposts_and_lintels.jpg" media-type="image/jpeg"/>
         <item id="abraham-sacrificing" href="abraham_sacrificing.jpg" media-type="image/jpeg"/>
         <item id="brain-programming" href="brain-programming.jpg" media-type="image/jpeg"/>
         <item id="weapon" href="weapon.jpg" media-type="image/jpeg"/>

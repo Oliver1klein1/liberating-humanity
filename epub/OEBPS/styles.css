@@ -1712,11 +1712,12 @@ p {
    PRINT STYLES - 6x9 INCH PAPERBACK (B&W)
    ============================================ */
 
-/* Hide navigation buttons for Kindle/KDP - applies to all media */
-nav.navigation,
-.navigation,
-nav[class="navigation"],
-nav[class*="navigation"]:not([epub:type="toc"]) {
+/* Hide navigation buttons only when preparing Kindle/KDP exports.
+   Add class "kdp-mode" to the <body> element in the Kindle build to activate. */
+body.kdp-mode nav.navigation,
+body.kdp-mode .navigation,
+body.kdp-mode nav[class="navigation"],
+body.kdp-mode nav[class*="navigation"]:not([epub\:type="toc"]) {
     display: none !important;
     visibility: hidden !important;
     height: 0 !important;
@@ -1725,9 +1726,9 @@ nav[class*="navigation"]:not([epub:type="toc"]) {
     padding: 0 !important;
 }
 
-.navigation a,
-nav.navigation a,
-nav[class="navigation"] a {
+body.kdp-mode .navigation a,
+body.kdp-mode nav.navigation a,
+body.kdp-mode nav[class="navigation"] a {
     display: none !important;
     visibility: hidden !important;
 }
@@ -1753,13 +1754,13 @@ nav[class="navigation"] a {
         text-align: justify;
     }
     
-    /* NUCLEAR OPTION: Hide ALL navigation elements and classes */
-    .navigation,
-    nav.navigation,
-    nav[class="navigation"],
-    nav[class*="navigation"],
-    [class*="navigation"],
-    nav[class*="navigation"]:not([epub:type="toc"]) {
+    /* NUCLEAR OPTION: Hide ALL navigation elements and classes (Kindle/KDP only) */
+    body.kdp-mode .navigation,
+    body.kdp-mode nav.navigation,
+    body.kdp-mode nav[class="navigation"],
+    body.kdp-mode nav[class*="navigation"],
+    body.kdp-mode [class*="navigation"],
+    body.kdp-mode nav[class*="navigation"]:not([epub\:type="toc"]) {
         display: none !important;
         visibility: hidden !important;
         opacity: 0 !important;
@@ -1774,7 +1775,7 @@ nav[class="navigation"] a {
     }
     
     /* Hide ALL nav elements except TOC content */
-    nav:not([epub:type="toc"]) {
+    body.kdp-mode nav:not([epub\:type="toc"]) {
         display: none !important;
         visibility: hidden !important;
         height: 0 !important;
@@ -1784,18 +1785,18 @@ nav[class="navigation"] a {
     }
     
     /* Allow ONLY TOC content nav to display */
-    nav[epub:type="toc"] {
+    body.kdp-mode nav[epub\:type="toc"] {
         display: block !important;
         visibility: visible !important;
     }
     
     /* Hide ALL links inside ANY navigation element (override inline styles) */
-    .navigation a,
-    nav.navigation a,
-    nav[class="navigation"] a,
-    nav:not([epub:type="toc"]) a,
-    [class="navigation"] a,
-    [class*="navigation"] a {
+    body.kdp-mode .navigation a,
+    body.kdp-mode nav.navigation a,
+    body.kdp-mode nav[class="navigation"] a,
+    body.kdp-mode nav:not([epub\:type="toc"]) a,
+    body.kdp-mode [class="navigation"] a,
+    body.kdp-mode [class*="navigation"] a {
         display: none !important;
         visibility: hidden !important;
         opacity: 0 !important;
@@ -1809,19 +1810,19 @@ nav[class="navigation"] a {
     }
     
     /* Override inline styles on navigation links - target all links with inline display styles */
-    .navigation a[style],
-    nav.navigation a[style],
-    [class="navigation"] a[style],
-    [class*="navigation"] a[style] {
+    body.kdp-mode .navigation a[style],
+    body.kdp-mode nav.navigation a[style],
+    body.kdp-mode [class="navigation"] a[style],
+    body.kdp-mode [class*="navigation"] a[style] {
         display: none !important;
         visibility: hidden !important;
         /* Force override any inline display property */
     }
     
     /* Additional catch-all for any remaining navigation elements */
-    body nav:not([epub:type="toc"]),
-    body .navigation,
-    body nav.navigation {
+    body.kdp-mode nav:not([epub\:type="toc"]),
+    body.kdp-mode .navigation,
+    body.kdp-mode nav.navigation {
         display: none !important;
         visibility: hidden !important;
         height: 0 !important;
@@ -1829,17 +1830,17 @@ nav[class="navigation"] a {
     }
     
     /* Preserve TOC content */
-    nav[epub:type="toc"],
-    nav[epub:type="toc"] *,
-    nav[epub:type="toc"] h1,
-    nav[epub:type="toc"] ol,
-    nav[epub:type="toc"] li,
-    nav[epub:type="toc"] a {
+    body.kdp-mode nav[epub\:type="toc"],
+    body.kdp-mode nav[epub\:type="toc"] *,
+    body.kdp-mode nav[epub\:type="toc"] h1,
+    body.kdp-mode nav[epub\:type="toc"] ol,
+    body.kdp-mode nav[epub\:type="toc"] li,
+    body.kdp-mode nav[epub\:type="toc"] a {
         display: block !important;
         color: #000 !important;
     }
     
-    nav[epub:type="toc"] h1 {
+    body.kdp-mode nav[epub\:type="toc"] h1 {
         font-size: 18pt !important;
         font-weight: bold !important;
         margin-bottom: 1em !important;
@@ -1847,18 +1848,18 @@ nav[class="navigation"] a {
         padding-bottom: 0.5em !important;
     }
     
-    nav[epub:type="toc"] ol {
+    body.kdp-mode nav[epub\:type="toc"] ol {
         list-style: none !important;
         padding: 0 !important;
         margin: 0 !important;
     }
     
-    nav[epub:type="toc"] li {
+    body.kdp-mode nav[epub\:type="toc"] li {
         margin: 0.4em 0 !important;
     }
     
     /* Convert TOC links to plain text for print */
-    nav[epub:type="toc"] a {
+    body.kdp-mode nav[epub\:type="toc"] a {
         text-decoration: none !important;
         padding: 0.3em 0 !important;
         border-left: none !important;
@@ -2324,11 +2325,11 @@ nav[class="navigation"] a {
     
     /* FINAL CATCH-ALL: Hide any navigation that might have slipped through */
     /* This rule should be last to override anything else - maximum specificity */
-    body nav.navigation,
-    body .navigation,
-    body nav[class="navigation"],
-    html body nav.navigation,
-    html body .navigation {
+    body.kdp-mode nav.navigation,
+    body.kdp-mode .navigation,
+    body.kdp-mode nav[class="navigation"],
+    html body.kdp-mode nav.navigation,
+    html body.kdp-mode .navigation {
         display: none !important;
         visibility: hidden !important;
         opacity: 0 !important;
@@ -2343,26 +2344,26 @@ nav[class="navigation"] a {
     }
     
     /* Hide ALL children of navigation elements */
-    body .navigation *,
-    body nav.navigation *,
-    body nav[class="navigation"] * {
+    body.kdp-mode .navigation *,
+    body.kdp-mode nav.navigation *,
+    body.kdp-mode nav[class="navigation"] * {
         display: none !important;
         visibility: hidden !important;
     }
     
     /* Exception: Only allow TOC content nav - must come after hiding rules */
-    nav[epub:type="toc"] {
+    body.kdp-mode nav[epub\:type="toc"] {
         display: block !important;
         visibility: visible !important;
     }
     
     /* Preserve TOC links - must be after the .navigation * rule */
-    nav[epub:type="toc"] * {
+    body.kdp-mode nav[epub\:type="toc"] * {
         display: block !important;
         visibility: visible !important;
     }
     
-    nav[epub:type="toc"] a {
+    body.kdp-mode nav[epub\:type="toc"] a {
         display: block !important;
         visibility: visible !important;
     }

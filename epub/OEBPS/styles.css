@@ -1914,6 +1914,12 @@ body.kdp-mode nav[class="navigation"] a {
         color: #000 !important;
     }
     
+    .note p {
+        page-break-inside: auto !important;
+        orphans: 2 !important;
+        widows: 2 !important;
+    }
+    
     /* Remove colored backgrounds, use borders instead */
     .atrocity-box,
     .comparison-table,

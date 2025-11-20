@@ -23,6 +23,7 @@ __pycache__/
 
 # Node
 node_modules/
+.next/
 
 # Build outputs
 dist/

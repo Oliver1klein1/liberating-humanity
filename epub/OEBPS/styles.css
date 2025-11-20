@@ -271,7 +271,6 @@ tr:nth-child(even) {
 .three-part-journey {
     display: flex;
     flex-wrap: wrap;
-    page-break-inside: avoid;
 }
 
 .journey-box {
@@ -1561,8 +1560,8 @@ p {
 
 /* Comparison Table */
 .comparison-table {
-    width: 100%;
-    margin: 2em 0;
+    width: 96%;              /* slightly narrower so borders don't clip on print */
+    margin: 2em auto;        /* center the table */
     border-collapse: collapse;
     background: white;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -1741,10 +1740,10 @@ body.kdp-mode nav[class="navigation"] a {
         /* Note: For bound books, manually set inside margin to 0.875in and outside to 0.625in in print dialog */
     }
     
-    /* Base print styles - black text on white */
+    /* Base print styles - 6x9 layout, COLOR by default */
     body {
         background: #fff !important;
-        color: #000 !important;
+        color: var(--text-color, #2d3748) !important;
         font-family: 'Georgia', 'Times New Roman', Times, serif;
         font-size: 11pt;
         line-height: 1.6;
@@ -1752,6 +1751,33 @@ body.kdp-mode nav[class="navigation"] a {
         margin: 0 !important;
         padding: 0 !important;
         text-align: justify;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    /* Part 2 hero section: remove background shading and borders for print */
+    .part2-hero {
+        background: #ffffff !important;
+        box-shadow: none !important;
+    }
+
+    .part2-hero hr {
+        border: none !important;
+        background: none !important;
+        height: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* Hide on-screen navigation buttons when printing (but keep TOC nav, which has no "navigation" class) */
+    nav.navigation,
+    .navigation,
+    nav[class="navigation"],
+    nav[class*="navigation"],
+    [class*="navigation"] {
+        display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+        overflow: hidden !important;
     }
     
     /* NUCLEAR OPTION: Hide ALL navigation elements and classes (Kindle/KDP only) */
@@ -1873,20 +1899,21 @@ body.kdp-mode nav[class="navigation"] a {
         max-width: 100% !important;
     }
     
-    /* Convert all text colors to black */
-    * {
+    /* Convert all text colors to black ONLY in kdp-mode */
+    body.kdp-mode * {
         color: #000 !important;
     }
     
-    /* Preserve white backgrounds, remove colored backgrounds */
-    body, html {
+    /* Preserve white backgrounds, remove colored backgrounds ONLY in kdp-mode */
+    body.kdp-mode,
+    html body.kdp-mode {
         background: #fff !important;
     }
     
-    /* Preserve background for callouts/boxes using borders */
-    .callout,
-    .bible-quote,
-    .chapter-opening-quote {
+    /* Preserve background for callouts/boxes using borders - B&W only in kdp-mode */
+    body.kdp-mode .callout,
+    body.kdp-mode .bible-quote,
+    body.kdp-mode .chapter-opening-quote {
         background: #f0f0f0 !important; /* Light gray for print */
         border: none !important;
         border-left: 4px solid #000 !important; /* Black border for print */
@@ -1896,7 +1923,6 @@ body.kdp-mode nav[class="navigation"] a {
         margin-bottom: 1rem !important;
         page-break-inside: auto !important;
         page-break-before: auto !important; /* Allow callout to start on previous page if space allows */
-        color: #000 !important;
         font-style: italic !important;
     }
     
@@ -1954,7 +1980,6 @@ body.kdp-mode nav[class="navigation"] a {
     
     /* Typography for print */
     h1, h2, h3, h4, h5, h6 {
-        color: #000 !important;
         page-break-after: avoid;
         page-break-inside: avoid;
         margin-top: 1.2em;
@@ -1988,7 +2013,6 @@ body.kdp-mode nav[class="navigation"] a {
         orphans: 3;
         widows: 3;
         margin-bottom: 0.5em;
-        color: #000 !important;
     }
     
     /* Allow breaks in paragraphs inside cards/boxes to improve page flow */
@@ -2007,24 +2031,26 @@ body.kdp-mode nav[class="navigation"] a {
         page-break-after: avoid !important;
     }
     
-    /* Preserve emphasis styles but in black */
+    /* Preserve emphasis styles (color comes from normal styles or kdp-mode override) */
     b, strong, .font-bold {
         font-weight: bold !important;
-        color: #000 !important;
     }
     
     i, em, .font-italic {
         font-style: italic !important;
-        color: #000 !important;
     }
     
-    /* Images - convert to grayscale, optimize sizing */
+    /* Images - optimize sizing (COLOR by default) */
     img {
         /* Don't override inline max-width - allow inline styles to control sizing */
         height: auto !important;
         page-break-inside: avoid;
         display: block;
         margin: 0.75rem auto;
+    }
+
+    /* Optional grayscale images only for KDP / special exports */
+    body.kdp-mode img {
         filter: grayscale(100%);
         -webkit-filter: grayscale(100%);
     }
@@ -2034,16 +2060,20 @@ body.kdp-mode nav[class="navigation"] a {
         /* Respect inline max-width styles */
     }
     
-    /* Quotes and callouts */
+    /* Quotes and callouts - layout only (colors handled by main styles / kdp-mode override) */
     .bible-quote,
     .chapter-opening-quote {
         font-style: italic;
-        border-left: 4px solid #000 !important;
         padding: 0.75rem 1rem !important;
         margin: 1rem 0 !important;
-        background: #fff !important;
         page-break-inside: avoid;
-        color: #000 !important;
+    }
+
+    /* Allow long callout paragraphs to split across pages (prevents big blank gaps) */
+    .callout p {
+        page-break-inside: auto !important;
+        orphans: 1 !important;
+        widows: 1 !important;
     }
     
     .quote-author,
@@ -2051,7 +2081,6 @@ body.kdp-mode nav[class="navigation"] a {
     .reference {
         font-size: 9pt;
         font-style: italic;
-        color: #000 !important;
         display: block;
         margin-top: 0.5rem;
         text-align: right;
@@ -2069,7 +2098,6 @@ body.kdp-mode nav[class="navigation"] a {
         orphans: 2;
         widows: 2;
         margin-bottom: 0.3em;
-        color: #000 !important;
     }
     
     /* Allow breaks in lists inside cards/boxes */
@@ -2104,7 +2132,6 @@ body.kdp-mode nav[class="navigation"] a {
         border: 1px solid #000 !important;
         padding: 0.4rem;
         text-align: left;
-        color: #000 !important;
         background: #fff !important;
     }
     
@@ -2125,7 +2152,6 @@ body.kdp-mode nav[class="navigation"] a {
     .chapter-number {
         font-size: 16pt !important;
         font-weight: bold !important;
-        color: #000 !important;
         margin-bottom: 0.5rem !important;
         text-align: center !important;
         display: block !important;
@@ -2224,7 +2250,6 @@ body.kdp-mode nav[class="navigation"] a {
         display: block !important;
         text-align: center !important;
         margin: 1rem 0 !important;
-        color: #000 !important;
     }
     
     .title-page .cover-image {
@@ -2264,9 +2289,8 @@ body.kdp-mode nav[class="navigation"] a {
         widows: 3 !important;
     }
     
-    /* Links - show URL in print */
+    /* Links - show URL in print (color from normal styles / kdp-mode override) */
     a {
-        color: #000 !important;
         text-decoration: underline;
     }
     
@@ -2283,7 +2307,6 @@ body.kdp-mode nav[class="navigation"] a {
         font-size: 3em;
         line-height: 0.8;
         padding-right: 0.1em;
-        color: #000 !important;
     }
     
     /* Hide screen-only elements */
@@ -2324,8 +2347,8 @@ body.kdp-mode nav[class="navigation"] a {
         color: #000 !important;
     }
     
-    /* Ensure all inline styles with colors are converted */
-    [style*="color:"] {
+    /* Ensure all inline styles with colors are converted ONLY in kdp-mode */
+    body.kdp-mode [style*="color:"] {
         color: #000 !important;
     }
     
@@ -2373,4 +2396,44 @@ body.kdp-mode nav[class="navigation"] a {
         display: block !important;
         visibility: visible !important;
     }
-} 
+}
+
+/* Optional color-print mode.
+   Add class "color-print" to the <body> element before printing
+   if you want a color 6x9 PDF instead of forced black & white. */
+@media print {
+    body.color-print {
+        background: #ffffff !important;
+        color: var(--text-color, #2d3748) !important;
+        font-family: 'Georgia', 'Times New Roman', Times, serif;
+        font-size: 11pt;
+        line-height: 1.6;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        text-align: justify;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    /* Restore heading colors in color-print mode */
+    body.color-print h1,
+    body.color-print h2,
+    body.color-print h3,
+    body.color-print h4,
+    body.color-print h5,
+    body.color-print h6 {
+        color: #2c3e50 !important;
+    }
+
+    /* Ensure colored boxes and callouts keep their background colors */
+    body.color-print .callout,
+    body.color-print .note,
+    body.color-print .infographic,
+    body.color-print .contrast-box,
+    body.color-print .comparison-table th,
+    body.color-print table th {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}

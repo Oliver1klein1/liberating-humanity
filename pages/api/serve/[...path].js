@@ -20,6 +20,7 @@ export default async function handler(req, res) {
   }
   
   try {
+    console.log('Serving file:', resolvedPath);
     // Check if file exists
     if (!fs.existsSync(resolvedPath)) {
       return res.status(404).json({ error: 'File not found' });

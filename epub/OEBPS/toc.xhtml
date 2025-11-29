@@ -40,6 +40,12 @@
             border-radius: 6px;
             transition: all 0.2s ease;
         }
+        @media print {
+            a {
+                text-decoration: none !important;
+                color: #000000 !important;
+            }
+        }
         a:hover {
             background: #f5f5f5;
             color: #004499;
@@ -75,6 +81,36 @@
         /* Active state */
         a:active {
             background: #e2e8f0;
+        }
+        @media print {
+            nav.navigation,
+            .navigation,
+            nav[class="navigation"],
+            nav.navigation *,
+            .navigation *,
+            nav.navigation a,
+            .navigation a,
+            nav[style*="text-align: center"],
+            nav[style*="border-top"],
+            a[style*="display: inline-block"],
+            a[style*="background: #007acc"],
+            a[style*="background-color: #007acc"] {
+                display: none !important;
+                visibility: hidden !important;
+                opacity: 0 !important;
+                height: 0 !important;
+                width: 0 !important;
+                max-height: 0 !important;
+                max-width: 0 !important;
+                overflow: hidden !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                border: none !important;
+                position: absolute !important;
+                left: -9999px !important;
+                top: -9999px !important;
+                clip: rect(0, 0, 0, 0) !important;
+            }
         }
     </style>
 </head>

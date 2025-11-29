@@ -6,6 +6,38 @@
     <link rel="stylesheet" type="text/css" href="styles.css"/>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style type="text/css">
+        @media print {
+            nav.navigation,
+            .navigation,
+            nav[class="navigation"],
+            nav.navigation *,
+            .navigation *,
+            nav.navigation a,
+            .navigation a,
+            nav[style*="text-align: center"],
+            nav[style*="border-top"],
+            a[style*="display: inline-block"],
+            a[style*="background: #007acc"],
+            a[style*="background-color: #007acc"] {
+                display: none !important;
+                visibility: hidden !important;
+                opacity: 0 !important;
+                height: 0 !important;
+                width: 0 !important;
+                max-height: 0 !important;
+                max-width: 0 !important;
+                overflow: hidden !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                border: none !important;
+                position: absolute !important;
+                left: -9999px !important;
+                top: -9999px !important;
+                clip: rect(0, 0, 0, 0) !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <div style="display: flex; align-items: flex-start; justify-content: center; min-height: 100vh; padding: 2rem; padding-top: 8rem; background-color: #f7fafc;">

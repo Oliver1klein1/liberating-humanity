@@ -5,6 +5,39 @@
     <title>Copyright</title>
     <link rel="stylesheet" type="text/css" href="styles.css"/>
     <meta charset="UTF-8"/>
+    <style type="text/css">
+        @media print {
+            /* CRITICAL: Hide navigation buttons when printing - inline styles in HTML override external CSS */
+            nav.navigation,
+            .navigation,
+            nav[class="navigation"],
+            nav.navigation *,
+            .navigation *,
+            nav.navigation a,
+            .navigation a,
+            nav[style*="text-align: center"],
+            nav[style*="border-top"],
+            a[style*="display: inline-block"],
+            a[style*="background: #007acc"],
+            a[style*="background-color: #007acc"] {
+                display: none !important;
+                visibility: hidden !important;
+                opacity: 0 !important;
+                height: 0 !important;
+                width: 0 !important;
+                max-height: 0 !important;
+                max-width: 0 !important;
+                overflow: hidden !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                border: none !important;
+                position: absolute !important;
+                left: -9999px !important;
+                top: -9999px !important;
+                clip: rect(0, 0, 0, 0) !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="copyright-page">

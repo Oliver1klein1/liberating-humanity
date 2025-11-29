@@ -1,5 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="en">
 <head>
     <title>Bibliography</title>
     <link rel="stylesheet" type="text/css" href="styles.css"/>
@@ -52,6 +53,37 @@
         .online-resource {
             color: #007acc;
             font-weight: 500;
+        }
+        @media print {
+            /* CRITICAL: Hide navigation buttons when printing - inline styles in HTML override external CSS */
+            nav.navigation,
+            .navigation,
+            nav[class="navigation"],
+            nav.navigation *,
+            .navigation *,
+            nav.navigation a,
+            .navigation a,
+            nav[style*="text-align: center"],
+            nav[style*="border-top"],
+            a[style*="display: inline-block"],
+            a[style*="background: #007acc"],
+            a[style*="background-color: #007acc"] {
+                display: none !important;
+                visibility: hidden !important;
+                opacity: 0 !important;
+                height: 0 !important;
+                width: 0 !important;
+                max-height: 0 !important;
+                max-width: 0 !important;
+                overflow: hidden !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                border: none !important;
+                position: absolute !important;
+                left: -9999px !important;
+                top: -9999px !important;
+                clip: rect(0, 0, 0, 0) !important;
+            }
         }
     </style>
 </head>
@@ -232,215 +264,235 @@
     
     <div class="divider" style="margin: 3em 0; border-top: 2px solid #e2e8f0;"></div>
 
-    <div class="other-books-section" style="margin-top: 3em; padding: 2em; background: #f8f9fa; border-radius: 8px; page-break-inside: avoid;">
+    <div class="other-books-section" style="margin-top: 3em; padding: 2em; background: #f8f9fa; border-radius: 8px; page-break-inside: avoid; page-break-before: always !important; break-before: page !important;">
         <h3 style="text-align: center; color: #2c3e50; margin-bottom: 1em; page-break-after: avoid;">You may be interested in these books by Ansilo Boff</h3>
         
-        <div style="margin-bottom: 3em; padding: 2em; background: #e3f2fd; border-radius: 8px; border-left: 4px solid #2c5282;">
-            <h3 style="text-align: center; color: #2c3e50; margin-bottom: 1em; page-break-after: avoid;">The "Rediscovering Jesus' Subverted Teachings and the Father's Love" Series</h3>
-            <div style="text-align: center; margin-bottom: 2em;">
-                <img src="rediscover_boxed_set_final2.jpg" alt="Rediscovering Jesus Series Boxed Set" style="max-width: 90%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);"/>
-            </div>
-            <p style="text-align: justify; line-height: 1.7; color: #2d3748;">For two thousand years, religion has distorted Jesus' message … turning liberation into obedience, and love into fear. It told us God demanded blood, that sin defined us from birth, and that submission (being 'under authority') mattered more than awareness.</p>
-            <p style="text-align: justify; line-height: 1.7; color: #2d3748;">But what if that story wasn't from Jesus at all?</p>
-            <p style="text-align: justify; line-height: 1.7; color: #2d3748;">This series rips through the edits, lies, and power plays that buried his true teachings. It exposes how Yahweh's wrath was mistaken for the Father's love … and how Paul's control replaced Jesus' freedom. From <b><i>Liberating Humanity</i></b>, <b><i>Escape the Hell Myth</i></b> and <b><i>101 Illustrated Bible Contradictions</i></b> to <b><i>Framing Jesus</i></b> and <b><i>Reality Unveiled</i></b> … these books uncover key revelations: Jesus never preached fear, wrath, or blood sacrifice. The scriptures were tampered with. Jesus revealed a Father who restores, not destroys. He also revealed we have far more power over this reality than we were programmed to think and believe.</p>
-            <p style="text-align: justify; line-height: 1.7; color: #2d3748; font-weight: bold;">From fear to freedom. From illusion to truth.</p>
-            <p style="text-align: justify; line-height: 1.7; color: #2d3748; font-weight: bold;">Raw. Daring. Restorative.</p>
-            <p style="text-align: justify; line-height: 1.7; color: #2d3748;">This isn't the end of faith … it's the beginning of awakening and living abundantly.</p>
-            <p style="text-align: justify; line-height: 1.7; color: #2d3748; margin-top: 1em; font-weight: bold;">Here are the other 4 books in this 5-book Series:</p>
+        <h3 style="text-align: center; color: #2c3e50; margin-bottom: 1em; margin-top: 2em; page-break-after: avoid;">The "Rediscovering Jesus' Subverted Teachings and the Father's Love" Series</h3>
+        <div style="text-align: center; margin-bottom: 2em;">
+            <img src="rediscover_boxed_set_final2.jpg" alt="Rediscovering Jesus Series Boxed Set" style="max-width: 90%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);"/>
         </div>
-        <div class="books-grid" style="display: grid; grid-template-columns: 1fr 2fr; gap: 1.5em; max-width: 800px; margin: 0 auto; page-break-before: avoid;">
-            <div class="book-item" style="text-align: center;">
-                <img src="reality-unveiled-cover.jpg" alt="Reality Unveiled" style="max-width: 150px; width: 150px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
-            </div>
-            <div class="book-description" style="text-align: left;">
-                <p><b>What if Jesus' most radical teaching wasn't about sin, but about your power to shape reality?</b></p>
-                <p>In <b><i>Reality Unveiled</i></b>, the author takes you beyond religion and into revelation. Where quantum physics, near-death experiences, and ancient wisdom converge to expose the truth: <b>CONSCIOUSNESS</b>, not matter, is the foundation of existence.</p>
-                <p>Discover how Jesus' hidden sayings align with cutting-edge science to reveal that "the kingdom of God is within you." You are not a helpless sinner awaiting rescue. You are a divine co-creator in a conscious universe, capable of manifesting healing, abundance, and transformation through awakened awareness.</p>
-                <p>If you've begun questioning the old stories and are ready to uncover the breathtaking truth of who you really are, turn the page … and awaken to the universe Jesus knew all along.</p>
-            </div>
-            
-            <div class="book-item" style="text-align: center;">
-                <img src="cover-bible-contradictions.jpg" alt="101 Illustrated Bible Contradictions" style="max-width: 150px; width: 150px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
-            </div>
-            <div class="book-description" style="text-align: left;">
-                <p><b>What if the Bible's contradictions are clues, not merely errors?</b></p>
-                <p><b><i>101 Illustrated Bible Contradictions</i></b> exposes the hidden seams: verses that clash, timelines that twist, doctrines that collide.</p>
-                <p>But beneath the chaos lies some deeper truths.</p>
-                <p>These cracks reveal two competing images of God: the wrathful Yahweh of Moses versus the loving Father Jesus revealed. And a divided faith, torn between Jesus' Kingdom of Love and Paul's empire-friendly gospel.</p>
-                <p>In this eye-opening guide, 12 Keys unlock what the contradictions show us: how Scripture was shaped, edited, and weaponized… and how the Truth still shines through. See the flaws. Find the freedom. Rediscover the Father.</p>
+        <p style="text-align: justify; line-height: 1.7; color: #2d3748;">For two thousand years, religion has distorted Jesus' message … turning liberation into obedience, and love into fear. It told us God demanded blood, that sin defined us from birth, and that submission (being 'under authority') mattered more than awareness.</p>
+        <p style="text-align: justify; line-height: 1.7; color: #2d3748;">But what if that story wasn't from Jesus at all?</p>
+        <p style="text-align: justify; line-height: 1.7; color: #2d3748;">This series rips through the edits, lies, and power plays that buried his true teachings. It exposes how Yahweh's wrath was mistaken for the Father's love … and how Paul's control replaced Jesus' freedom. From <b><i>Liberating Humanity</i></b>, <b><i>Escape the Hell Myth</i></b> and <b><i>101 Illustrated Bible Contradictions</i></b> to <b><i>Framing Jesus</i></b> and <b><i>Reality Unveiled</i></b> … these books uncover key revelations: Jesus never preached fear, wrath, or blood sacrifice. The scriptures were tampered with. Jesus revealed a Father who restores, not destroys. He also revealed we have far more power over this reality than we were programmed to think and believe.</p>
+        <p style="text-align: justify; line-height: 1.7; color: #2d3748; font-weight: bold;">From fear to freedom. From illusion to truth.</p>
+        <p style="text-align: justify; line-height: 1.7; color: #2d3748; font-weight: bold;">Raw. Daring. Restorative.</p>
+        <p style="text-align: justify; line-height: 1.7; color: #2d3748;">This isn't the end of faith … it's the beginning of awakening and living abundantly.</p>
+        <p style="text-align: justify; line-height: 1.7; color: #2d3748; margin-top: 1em; margin-bottom: 2em; font-weight: bold;">Here are the other 4 books in this 5-book Series:</p>
+        <div class="books-grid" style="display: grid; grid-template-columns: calc(400px - 1cm) 1fr; gap: 1.5em; max-width: 1000px; margin: 0 auto; page-break-before: avoid;">
+            <div class="book-entry" style="page-break-inside: avoid !important; break-inside: avoid !important;">
+                <div class="book-item" style="text-align: center;">
+                    <img src="reality-unveiled-cover.jpg" alt="Reality Unveiled" style="max-width: 150px; width: 150px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
+                </div>
+                <div class="book-description" style="text-align: left;">
+                    <p><b>What if Jesus' most radical teaching wasn't about sin, but about your power to shape reality?</b></p>
+                    <p>In <b><i>Reality Unveiled</i></b>, the author takes you beyond religion and into revelation. Where quantum physics, near-death experiences, and ancient wisdom converge to expose the truth: <b>CONSCIOUSNESS</b>, not matter, is the foundation of existence.</p>
+                    <p>Discover how Jesus' hidden sayings align with cutting-edge science to reveal that "the kingdom of God is within you." You are a divine co-creator in a conscious universe, capable of consciously manifesting healing, abundance, and transformation through awakened awareness.</p>
+                    <p>If you are ready to uncover the breathtaking truth of who you really are, turn the page … and awaken to the universe Jesus knew all along.</p>
+                </div>
             </div>
             
-            <div class="book-item" style="text-align: center;">
-                <img src="framing-jesus-cover.jpg" alt="Framing Jesus" style="max-width: 150px; width: 150px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
-            </div>
-            <div class="book-description" style="text-align: left;">
-                <p><b>Some of what you know of Jesus is a fabrication. Not the man himself, but the story we've been told about him.</b></p>
-                <p>For centuries, the church has systematically reframed Jesus' radical message, turning a revolutionary teacher of love and liberation into a religious figurehead who supports the very systems he came to dismantle.</p>
-                <p>This book peels back the layers of theological manipulation to reveal the authentic Jesus the one who challenged religious authority, championed the marginalized, and taught that the kingdom of God is within you, not in a distant heaven.</p>
-                <p>Discover how parts of his identity were touched up for over 2000 years and why it matters.</p>
+            <div class="book-entry" style="page-break-inside: avoid !important; break-inside: avoid !important;">
+                <div class="book-item" style="text-align: center;">
+                    <img src="cover-bible-contradictions.jpg" alt="101 Illustrated Bible Contradictions" style="max-width: 150px; width: 150px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
+                </div>
+                <div class="book-description" style="text-align: left;">
+                    <p><b>What if the Bible's contradictions are clues, not merely errors?</b></p>
+                    <p><b><i>101 Illustrated Bible Contradictions</i></b> exposes the hidden seams: verses that clash, timelines that twist, doctrines that collide.</p>
+                    <p>But beneath the chaos lies some deeper truths.</p>
+                    <p>These cracks reveal two competing images of God: the wrathful Yahweh of Moses versus the loving Father Jesus revealed. And a divided faith, torn between Jesus' Kingdom of Love and Paul's empire-friendly gospel.</p>
+                    <p>In this eye-opening guide, 12 Keys unlock what the contradictions show us: how Scripture was shaped, edited, and weaponized… and how the Truth still shines through. See the flaws. Find the freedom. Rediscover the Father.</p>
+                </div>
             </div>
             
-            <div class="book-item" style="text-align: center;">
-                <img src="Hell-cover01.jpg" alt="Escape the Hell Myth" style="max-width: 150px; width: 150px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
+            <div class="book-entry" style="page-break-inside: avoid !important; break-inside: avoid !important;">
+                <div class="book-item" style="text-align: center;">
+                    <img src="framing-jesus-cover.jpg" alt="Framing Jesus" style="max-width: 150px; width: 150px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
+                </div>
+                <div class="book-description" style="text-align: left;">
+                    <p><b>Some of what you know of Jesus is a fabrication. Not the man himself, but the story we've been told about him.</b></p>
+                    <p>For centuries, the church has systematically reframed Jesus' radical message, turning a revolutionary teacher of love and liberation into a religious figurehead who supports the very systems he came to dismantle.</p>
+                    <p>This book peels back the layers of theological manipulation to reveal the authentic Jesus the one who challenged religious authority, championed the marginalized, and taught that the kingdom of God is within you, not in a distant heaven.</p>
+                    <p>Discover how parts of his identity were touched up for over 2000 years and why it matters.</p>
+                </div>
             </div>
-            <div class="book-description" style="text-align: left;">
-                <p><b>What if the story of eternal torment isn't from Jesus at all?</b></p>
-                <p>In <b><i>Escape the Hell Myth</i></b>, Ansilo Boff exposes the shocking truth: the doctrine of everlasting punishment was built on mistranslations, theological bias, and fear-based control—not on the words of Christ.</p>
-                <p>Through deep linguistic study, entertainingly delivered, and bold spiritual insight, this book unpacks what Sheol, Hades, Gehenna, and aionios really meant in the original texts, how Jesus' teachings reveal a God of restoration, not retribution, why Yahweh's violent commands contradict the loving Father Jesus revealed, and the breathtaking hope of <b>universal reconciliation</b>: a divine plan to heal all creation.</p>
-                <p>If you've ever questioned how a loving God could condemn souls to eternal fire, this book will help you escape the lie and rediscover the liberating message of Jesus. Jesus never taught Hell. He revealed a Father who loves unconditionally, all the time ... forever.</p>
+            
+            <div class="book-entry" style="page-break-inside: avoid !important; break-inside: avoid !important;">
+                <div class="book-item" style="text-align: center;">
+                    <img src="Hell-cover01.jpg" alt="Escape the Hell Myth" style="max-width: 150px; width: 150px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
+                </div>
+                <div class="book-description" style="text-align: left;">
+                    <p><b>What if the story of eternal torment isn't from Jesus at all?</b></p>
+                    <p>In <b><i>Escape the Hell Myth</i></b>, Ansilo Boff exposes the shocking truth: the doctrine of everlasting punishment was built on mistranslations, theological bias, and fear-based control—not on the words of Christ.</p>
+                    <p>Through deep linguistic study, entertainingly delivered, and bold spiritual insight, this book unpacks what Sheol, Hades, Gehenna, and aionios really meant in the original texts, how Jesus' teachings reveal a God of restoration, not retribution, why Yahweh's violent commands contradict the loving Father Jesus revealed, and the breathtaking hope of <b>universal reconciliation</b>: a divine plan to heal all creation.</p>
+                    <p>If you've ever questioned how a loving God could condemn souls to eternal fire, this book will help you escape the lie and rediscover the liberating message of Jesus. Jesus never taught Hell. He revealed a Father who loves unconditionally, all the time ... forever.</p>
+                </div>
             </div>
         </div>
         
         <!-- The Father's Heart Children's Book Series -->
-        <div style="margin-top: 3em; padding: 2em; background: #fff8e1; border-radius: 8px; border-left: 4px solid #ffa726;">
-            <h3 style="text-align: center; color: #e65100; margin-bottom: 0.5em;">The Father's Heart Children's Book Series</h3>
+        <div class="other-books-section" style="margin-top: 3em; padding: 2em; background: #f8f9fa; border-radius: 8px; page-break-inside: avoid; page-break-before: always !important; break-before: page !important;">
+            <h3 style="text-align: center; color: #2c3e50; margin-bottom: 0.5em;">The Father's Heart Children's Book Series</h3>
             <p style="text-align: center; font-style: italic; color: #666; margin-bottom: 1.5em;">See others and God through Jesus' eyes.</p>
             <div style="text-align: center; margin: 1.5em 0;">
                 <img src="fh_mockup1112.jpg" alt="The Father's Heart Children's Book Series Mockup" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
             </div>
-            <div style="max-width: 900px; margin: 0 auto; padding: 1em; background: white; border-radius: 8px;">
-                <p><b>What if the stories we tell about God helped children feel safe, kind, and deeply loved?</b></p>
-                <p>In <i>The Father's Heart Series</i>, Ansilo Boff re-introduces children to the gentle, forgiving Father that Jesus revealed — not a God of punishment or fear, but one of peace, mercy, and inclusion.</p>
-                <p>Through tender storytelling and luminous watercolor illustrations, each book turns everyday moments into spiritual discoveries: forgiving a friend, using kind words, feeling peace during storms, sharing what we have, and welcoming others at our table.</p>
-                <p>Every page helps children (and parents) unlearn fear and rediscover love. Because when we see others — and God — through Jesus' eyes, the world becomes a brighter, kinder place.</p>
-                <p style="font-style: italic;">Perfect for bedtime reading, family devotion, or Sunday-school story time, The Father's Heart Series nurtures young hearts to grow in empathy, peace, and joy.</p>
-            </div>
+            <p style="text-align: justify; line-height: 1.7; color: #2d3748;"><b>What if the stories we tell about God helped children feel safe, kind, and deeply loved?</b></p>
+            <p style="text-align: justify; line-height: 1.7; color: #2d3748;">In <i>The Father's Heart Series</i>, Ansilo Boff re-introduces children to the gentle, forgiving Father that Jesus revealed — not a God of punishment or fear, but one of peace, mercy, and inclusion.</p>
+            <p style="text-align: justify; line-height: 1.7; color: #2d3748;">Through tender storytelling and luminous watercolor illustrations, each book turns everyday moments into spiritual discoveries: forgiving a friend, using kind words, feeling peace during storms, sharing what we have, and welcoming others at our table.</p>
+            <p style="text-align: justify; line-height: 1.7; color: #2d3748;">Every page helps children (and parents) unlearn fear and rediscover love. Because when we see others — and God — through Jesus' eyes, the world becomes a brighter, kinder place.</p>
+            <p style="text-align: justify; line-height: 1.7; color: #2d3748; font-style: italic; margin-bottom: 2em;">Perfect for bedtime reading, family devotion, or Sunday-school story time, The Father's Heart Series nurtures young hearts to grow in empathy, peace, and joy.</p>
             
-            <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 1.5em; max-width: 900px; margin: 2em auto 0;">
-                <div style="text-align: center;">
-                    <img src="fh-book1-cover.jpg" alt="When My Little Brother Broke My Toy" style="max-width: 125px; width: 125px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
-                </div>
-                <div style="text-align: left;">
-                    <p><b>When My Little Brother Broke My Toy</b></p>
-                    <p style="font-style: italic; color: #e65100;">So That's What "Forgive" Means!</p>
-                    <p>What if forgiveness wasn't about payback—but about love that keeps going? When a child's toy breaks, so does his heart. But through gentle storytelling and bright illustrations, kids discover what Jesus revealed: the Father never punishes or holds grudges—He only loves and forgives. A tender, hope-filled story that helps children let go of anger, make peace quickly, and feel God's smile again.</p>
-                </div>
-                
-                <div style="text-align: center;">
-                    <img src="fh-book2-cover.jpg" alt="When I Decided I Won't Be Friends with Oliver Anymore" style="max-width: 125px; width: 125px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
-                </div>
-                <div style="text-align: left;">
-                    <p><b>When I Decided I Won't Be Friends with Oliver Anymore</b></p>
-                    <p style="font-style: italic; color: #e65100;">So That's What "Not Holding a Grudge" Means!</p>
-                    <p>Can love start again after friendship breaks? When hurt feelings turn heavy, one child learns that real strength isn't in winning … it's in forgiving. Through playful scenes and a whisper of God's voice, readers see that the Father never keeps score; He simply says, "Let's start again." A heartfelt reminder for every child that mercy always brings the sunshine back.</p>
+            <div class="books-grid" style="display: grid; grid-template-columns: calc(400px - 1.5cm) 1fr; gap: 1.5em; max-width: 1000px; margin: 2em auto 0;">
+                <div class="book-entry" style="page-break-inside: avoid !important; break-inside: avoid !important;">
+                    <div style="text-align: center;">
+                        <img src="fh-book1-cover.jpg" alt="When My Little Brother Broke My Toy" style="max-width: 125px; width: 125px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
+                    </div>
+                    <div style="text-align: left;">
+                        <p><b>When My Little Brother Broke My Toy</b></p>
+                        <p style="font-style: italic; color: #e65100;">So That's What "Forgive" Means!</p>
+                        <p>What if forgiveness wasn't about payback—but about love that keeps going? When a child's toy breaks, so does his heart. But through gentle storytelling and bright illustrations, kids discover what Jesus revealed: the Father never punishes or holds grudges—He only loves and forgives. A tender, hope-filled story that helps children let go of anger, make peace quickly, and feel God's smile again.</p>
+                    </div>
                 </div>
                 
-                <div style="text-align: center;">
-                    <img src="fh-book3-cover.jpg" alt="Why Saying Bad Words To or About Others Makes Everyone Sad" style="max-width: 125px; width: 125px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
-                </div>
-                <div style="text-align: left;">
-                    <p><b>Why Saying Bad Words To or About Others Makes Everyone Sad</b></p>
-                    <p style="font-style: italic; color: #e65100;">So That's What "Guarding Our Tongue" Means!</p>
-                    <p>Words can hurt—or heal. After blurting something mean, a young child discovers that words are like colors: some paint gray, others paint joy. With Jesus as the gentle teacher, children learn how the Father's words always bless, never curse. A joyful story that helps kids speak kindly, choose bright "heart-colors," and spread love wherever they go.</p>
-                </div>
-                
-                <div style="text-align: center;">
-                    <img src="fh-book4-cover.jpg" alt="When Thunder Made Me Hide" style="max-width: 125px; width: 125px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
-                </div>
-                <div style="text-align: left;">
-                    <p><b>When Thunder Made Me Hide</b></p>
-                    <p style="font-style: italic; color: #e65100;">So That's What "Peace Inside" Means!</p>
-                    <p>Even the loudest storm can't shake God's peace. When thunder roars, fear whispers, "God is angry." But in the quiet of the child's heart, another voice answers, "I'm here—always calm, always love." This comforting story helps children trade fear for trust and discover that true safety comes from the Father's presence within.</p>
+                <div class="book-entry" style="page-break-inside: avoid !important; break-inside: avoid !important;">
+                    <div style="text-align: center;">
+                        <img src="fh-book2-cover.jpg" alt="When I Decided I Won't Be Friends with Oliver Anymore" style="max-width: 125px; width: 125px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
+                    </div>
+                    <div style="text-align: left;">
+                        <p><b>When I Decided I Won't Be Friends with Oliver Anymore</b></p>
+                        <p style="font-style: italic; color: #e65100;">So That's What "Not Holding a Grudge" Means!</p>
+                        <p>Can love start again after friendship breaks? When hurt feelings turn heavy, one child learns that real strength isn't in winning … it's in forgiving. Through playful scenes and a whisper of God's voice, readers see that the Father never keeps score; He simply says, "Let's start again." A heartfelt reminder for every child that mercy always brings the sunshine back.</p>
+                    </div>
                 </div>
                 
-                <div style="text-align: center;">
-                    <img src="fh-book5-cover.jpg" alt="When We Made Room at Our Table" style="max-width: 125px; width: 125px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
+                <div class="book-entry" style="page-break-inside: avoid !important; break-inside: avoid !important;">
+                    <div style="text-align: center;">
+                        <img src="fh-book3-cover.jpg" alt="Why Saying Bad Words To or About Others Makes Everyone Sad" style="max-width: 125px; width: 125px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
+                    </div>
+                    <div style="text-align: left;">
+                        <p><b>Why Saying Bad Words To or About Others Makes Everyone Sad</b></p>
+                        <p style="font-style: italic; color: #e65100;">So That's What "Guarding Our Tongue" Means!</p>
+                        <p>Words can hurt—or heal. After blurting something mean, a young child discovers that words are like colors: some paint gray, others paint joy. With Jesus as the gentle teacher, children learn how the Father's words always bless, never curse. A joyful story that helps kids speak kindly, choose bright "heart-colors," and spread love wherever they go.</p>
+                    </div>
                 </div>
-                <div style="text-align: left;">
-                    <p><b>When We Made Room at Our Table</b></p>
-                    <p style="font-style: italic; color: #e65100;">So That's What "Welcome" Means!</p>
-                    <p>What happens when we make room for one more? A simple bowl of soup becomes a feast of friendship as a family invites new neighbors to share their table. Through warmth and wonder, children learn that love grows by including others—the way the Father includes everyone. A beautiful story of generosity, belonging, and the kind of welcome that feels like home.</p>
+                
+                <div class="book-entry" style="page-break-inside: avoid !important; break-inside: avoid !important;">
+                    <div style="text-align: center;">
+                        <img src="fh-book4-cover.jpg" alt="When Thunder Made Me Hide" style="max-width: 125px; width: 125px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
+                    </div>
+                    <div style="text-align: left;">
+                        <p><b>When Thunder Made Me Hide</b></p>
+                        <p style="font-style: italic; color: #e65100;">So That's What "Peace Inside" Means!</p>
+                        <p>Even the loudest storm can't shake God's peace. When thunder roars, fear whispers, "God is angry." But in the quiet of the child's heart, another voice answers, "I'm here—always calm, always love." This comforting story helps children trade fear for trust and discover that true safety comes from the Father's presence within.</p>
+                    </div>
+                </div>
+                
+                <div class="book-entry" style="page-break-inside: avoid !important; break-inside: avoid !important;">
+                    <div style="text-align: center;">
+                        <img src="fh-book5-cover.jpg" alt="When We Made Room at Our Table" style="max-width: 125px; width: 125px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
+                    </div>
+                    <div style="text-align: left;">
+                        <p><b>When We Made Room at Our Table</b></p>
+                        <p style="font-style: italic; color: #e65100;">So That's What "Welcome" Means!</p>
+                        <p>What happens when we make room for one more? A simple bowl of soup becomes a feast of friendship as a family invites new neighbors to share their table. Through warmth and wonder, children learn that love grows by including others—the way the Father includes everyone. A beautiful story of generosity, belonging, and the kind of welcome that feels like home.</p>
+                    </div>
                 </div>
             </div>
         </div>
         
         <!-- The 'Unspoken Hopes and Dreams' Series -->
-        <div style="margin-top: 3em; padding: 2em; background: #e8f5e9; border-radius: 8px; border-left: 4px solid #66bb6a;">
-            <h3 style="text-align: center; color: #2e7d32; margin-bottom: 0.5em;">The 'Unspoken Hopes and Dreams' Series</h3>
+        <div class="other-books-section" style="margin-top: 3em; padding: 2em; background: #f8f9fa; border-radius: 8px; page-break-inside: avoid; page-break-before: always !important; break-before: page !important;">
+            <h3 style="text-align: center; color: #2c3e50; margin-bottom: 0.5em;">The 'Unspoken Hopes and Dreams' Series</h3>
             <p style="text-align: center; font-style: italic; color: #666; margin-bottom: 1.5em;">A whisper. A promise. A lifeline wrapped in verse.</p>
             <div style="text-align: center; margin: 1.5em 0;">
                 <img src="unspoken-hopes-and-dreams-series-mockup.jpg" alt="The 'Unspoken Hopes and Dreams' Series Mockup" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
             </div>
-            <div style="max-width: 900px; margin: 0 auto; padding: 1em; background: white; border-radius: 8px;">
-                <p>The <i>Unspoken Hopes and Dreams</i> series is a poetic love letter from parent to child—written before the first breath, the first step, the first word.</p>
-                <p>Each book is a tender collection of five-line verses that anchor a child's soul in love, courage, and belonging.</p>
-                <p>Perfect for parents to read with little ones aged 3–7, these keepsakes bridge generations and preserve the most sacred moments of early parenthood.</p>
-                <p style="font-style: italic;">Whether you're expecting or already holding your miracle, these books are a timeless gift from your heart to theirs.</p>
-            </div>
+            <p style="text-align: justify; line-height: 1.7; color: #2d3748;">The <i>Unspoken Hopes and Dreams</i> series is a poetic love letter from parent to child—written before the first breath, the first step, the first word.</p>
+            <p style="text-align: justify; line-height: 1.7; color: #2d3748;">Each book is a tender collection of five-line verses that anchor a child's soul in love, courage, and belonging.</p>
+            <p style="text-align: justify; line-height: 1.7; color: #2d3748;">Perfect for parents to read with little ones aged 3–7, these keepsakes bridge generations and preserve the most sacred moments of early parenthood.</p>
+            <p style="text-align: justify; line-height: 1.7; color: #2d3748; font-style: italic; margin-bottom: 2em;">Whether you're expecting or already holding your miracle, these books are a timeless gift from your heart to theirs.</p>
             
-            <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 1.5em; max-width: 900px; margin: 2em auto 0;">
-                <div style="text-align: center;">
-                    <img src="b1-mum-son2.jpg" alt="Whispers to My Unborn Son – A Mum's Poetic Life Jacket" style="max-width: 125px; width: 125px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
-                </div>
-                <div style="text-align: left;">
-                    <p><b>Whispers to My Unborn Son – A Mum's Poetic Life Jacket</b></p>
-                    <p>Before your son takes his first breath, you've already begun to shape his heart—with your love, your hope, your dreams for the man he'll become. This book captures that sacred whisper. Through simple, five-line rhymes and enchanting illustrations, a mother passes on courage, gentleness, and grace. A perfect baby shower or bedtime gift—a keepsake to treasure forever.</p>
-                </div>
-                
-                <div style="text-align: center;">
-                    <img src="b2-dad-son-cover.jpg" alt="Whispers to My Unborn Son – A Dad's Poetic Life Jacket" style="max-width: 125px; width: 125px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
-                </div>
-                <div style="text-align: left;">
-                    <p><b>Whispers to My Unborn Son – A Dad's Poetic Life Jacket</b></p>
-                    <p>Long before your son opens his eyes, your heartbeat is already teaching him strength and love. This book is your voice when words fall short—a father's legacy in verse. Each five-line poem becomes a compass for his soul, guiding him toward truth and tenderness. An unforgettable keepsake for new or expecting fathers—promising wisdom that lasts a lifetime.</p>
+            <div class="books-grid" style="display: grid; grid-template-columns: calc(400px - 1.5cm) 1fr; gap: 1.5em; max-width: 1000px; margin: 2em auto 0;">
+                <div class="book-entry" style="page-break-inside: avoid !important; break-inside: avoid !important;">
+                    <div style="text-align: center;">
+                        <img src="b1-mum-son2.jpg" alt="Whispers to My Unborn Son – A Mum's Poetic Life Jacket" style="max-width: 125px; width: 125px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
+                    </div>
+                    <div style="text-align: left;">
+                        <p><b>Whispers to My Unborn Son – A Mum's Poetic Life Jacket</b></p>
+                        <p>Before your son takes his first breath, you've already begun to shape his heart—with your love, your hope, your dreams for the man he'll become. This book captures that sacred whisper. Through simple, five-line rhymes and enchanting illustrations, a mother passes on courage, gentleness, and grace. A perfect baby shower or bedtime gift—a keepsake to treasure forever.</p>
+                    </div>
                 </div>
                 
-                <div style="text-align: center;">
-                    <img src="b3_dad_daughter_cover.jpg" alt="Whispers to My Unborn Daughter – A Dad's Poetic Life Jacket" style="max-width: 125px; width: 125px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
-                </div>
-                <div style="text-align: left;">
-                    <p><b>Whispers to My Unborn Daughter – A Dad's Poetic Life Jacket</b></p>
-                    <p>A daughter may not remember every word her father says—but she'll never forget how he made her feel: safe, seen, and loved. These verses are his embrace in rhyme—a father's quiet devotion captured in five lines at a time. Each poem plants seeds of confidence, compassion, and strength. A heartwarming gift for dads welcoming daughters—the beginning of a bond that lasts forever.</p>
+                <div class="book-entry" style="page-break-inside: avoid !important; break-inside: avoid !important;">
+                    <div style="text-align: center;">
+                        <img src="b2-dad-son-cover.jpg" alt="Whispers to My Unborn Son – A Dad's Poetic Life Jacket" style="max-width: 125px; width: 125px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
+                    </div>
+                    <div style="text-align: left;">
+                        <p><b>Whispers to My Unborn Son – A Dad's Poetic Life Jacket</b></p>
+                        <p>Long before your son opens his eyes, your heartbeat is already teaching him strength and love. This book is your voice when words fall short—a father's legacy in verse. Each five-line poem becomes a compass for his soul, guiding him toward truth and tenderness. An unforgettable keepsake for new or expecting fathers—promising wisdom that lasts a lifetime.</p>
+                    </div>
                 </div>
                 
-                <div style="text-align: center;">
-                    <img src="b4-mum-daughter.jpg" alt="Whispers to My Unborn Daughter – A Mum's Poetic Life Jacket" style="max-width: 125px; width: 125px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
+                <div class="book-entry" style="page-break-inside: avoid !important; break-inside: avoid !important;">
+                    <div style="text-align: center;">
+                        <img src="b3_dad_daughter_cover.jpg" alt="Whispers to My Unborn Daughter – A Dad's Poetic Life Jacket" style="max-width: 125px; width: 125px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
+                    </div>
+                    <div style="text-align: left;">
+                        <p><b>Whispers to My Unborn Daughter – A Dad's Poetic Life Jacket</b></p>
+                        <p>A daughter may not remember every word her father says—but she'll never forget how he made her feel: safe, seen, and loved. These verses are his embrace in rhyme—a father's quiet devotion captured in five lines at a time. Each poem plants seeds of confidence, compassion, and strength. A heartwarming gift for dads welcoming daughters—the beginning of a bond that lasts forever.</p>
+                    </div>
                 </div>
-                <div style="text-align: left;">
-                    <p><b>Whispers to My Unborn Daughter – A Mum's Poetic Life Jacket</b></p>
-                    <p>Before your daughter sees your face, she already carries your heartbeat within her. This book is your soul, written in lullabies. Through tender five-line poems and radiant illustrations, a mother weaves lessons of kindness, courage, and freedom. A gift every mum-to-be will cherish—a promise of love wrapped in poetry.</p>
+                
+                <div class="book-entry" style="page-break-inside: avoid !important; break-inside: avoid !important;">
+                    <div style="text-align: center;">
+                        <img src="b4-mum-daughter.jpg" alt="Whispers to My Unborn Daughter – A Mum's Poetic Life Jacket" style="max-width: 125px; width: 125px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
+                    </div>
+                    <div style="text-align: left;">
+                        <p><b>Whispers to My Unborn Daughter – A Mum's Poetic Life Jacket</b></p>
+                        <p>Before your daughter sees your face, she already carries your heartbeat within her. This book is your soul, written in lullabies. Through tender five-line poems and radiant illustrations, a mother weaves lessons of kindness, courage, and freedom. A gift every mum-to-be will cherish—a promise of love wrapped in poetry.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     
-    <div class="callout" style="margin-top: 3em; padding: 2em; background: #f0f8ff; border-left: 4px solid #007acc; text-align: left; page-break-before: always; min-height: 80vh; font-style: normal !important;">
-        <img src="liberation_declaration.jpg" alt="Liberation Declaration" style="max-width: 100%; height: auto; margin: 0 auto 1.5em auto; display: block;"/>
-        <h3 style="color: #007acc; margin-bottom: 1em; font-size: 1.3em; text-align: center; font-style: normal !important;">A LIBERATION DECLARATION, PRAYER, AFFIRMATION</h3>
-        <p style="font-size: 1.1em; line-height: 1.8; font-weight: 500; margin-bottom: 1em; font-style: normal !important;">I am <b>overflowing with gratitude</b> at the opportunity to <b>cast off darkness</b> and <b>step into light and liberation</b>.</p>
-        <p style="font-size: 1.1em; line-height: 1.8; font-weight: 500; margin-bottom: 1em; font-style: normal !important;">I recognize that I have been <b>hypnotized</b> by Yahweh's subtle <b>MENTAL PROGRAMMING DEVICES</b> through a combination of <b>thought forms</b> which I was <b>tricked into embracing and speaking</b>, thereby <b>legally empowering</b> these thought forms and the entities behind them in the spirit realm.</p>
+    <div class="callout" style="margin-top: 3em; padding: 2em; background: #f0f8ff; border-left: 4px solid #007acc; text-align: justify; page-break-before: always !important; break-before: page !important; min-height: 80vh; font-style: normal !important;">
+        <img src="liberation_declaration.jpg" alt="Liberation Declaration" style="max-width: 100%; height: auto; margin: 0 auto 1.5em auto; display: block; page-break-after: avoid !important; break-after: avoid !important;"/>
+        <h3 style="color: #007acc; margin-bottom: 1em; font-size: 1.3em; text-align: center; font-style: normal !important; page-break-after: avoid !important; break-after: avoid !important;">A LIBERATION DECLARATION, PRAYER, AFFIRMATION</h3>
+        <p style="font-size: 1em; line-height: 1.8; font-weight: 500; margin-bottom: 1em; font-style: normal !important; text-align: justify;">I am <b>overflowing with gratitude</b> at the opportunity to <b>cast off darkness</b> and <b>step into light and liberation</b>.</p>
+        <p style="font-size: 1em; line-height: 1.8; font-weight: 500; margin-bottom: 1em; font-style: normal !important; text-align: justify;">I recognize that I have been <b>hypnotized</b> by Yahweh's subtle <b>MENTAL PROGRAMMING DEVICES</b> through a combination of <b>thought forms</b> which I was <b>tricked into embracing and speaking</b>, thereby <b>legally empowering</b> these thought forms and the entities behind them in the spirit realm.</p>
         <img src="mess_with_thinking.jpg" alt="Mess With Thinking" style="max-width: 100%; height: auto; margin: 1.5em auto; display: block;"/>
-        <p style="font-size: 1.1em; line-height: 1.8; font-weight: 500; margin-bottom: 1em; font-style: normal !important;">I see now that I gave Yahweh the <b>legal right</b> to mess with <b>MY THINKING</b> and <b>PERCEPTION</b>… to <b>dull, suppress and cloud</b> my faculties, when I declared verses like Proverbs 3:5-6</p>
+        <p style="font-size: 1em; line-height: 1.8; font-weight: 500; margin-bottom: 1em; font-style: normal !important; text-align: justify;">I see now that I gave Yahweh the <b>legal right</b> to mess with <b>MY THINKING</b> and <b>PERCEPTION</b>… to <b>dull, suppress and cloud</b> my faculties, when I declared verses like Proverbs 3:5-6</p>
         <div class="callout" style="margin: 1.5em 0; padding: 1.5em; background: #fff3cd; border-left: 4px solid #ffc107; border-radius: 4px; font-style: italic !important;">
-            <p style="font-size: 1.1em; line-height: 1.8; font-weight: 500; margin-bottom: 0.5em; font-style: italic !important; padding-left: 0;">"Trust in Yahweh with all your heart</p>
-            <p style="font-size: 1.1em; line-height: 1.8; font-weight: 500; margin-bottom: 0.5em; font-style: italic !important; padding-left: 0;">and LEAN NOT ON YOUR OWN <b>UNDERSTANDING</b>;</p>
-            <p style="font-size: 1.1em; line-height: 1.8; font-weight: 500; margin-bottom: 0.5em; font-style: italic !important; padding-left: 0;">in all your ways submit to him,</p>
-            <p style="font-size: 1.1em; line-height: 1.8; font-weight: 500; margin-bottom: 0; font-style: italic !important; padding-left: 0;">and he will make your paths straight."</p>
+            <p style="font-size: 1em; line-height: 1.8; font-weight: 500; margin-bottom: 0.5em; font-style: italic !important; padding-left: 0; text-align: justify;">"Trust in Yahweh with all your heart</p>
+            <p style="font-size: 1em; line-height: 1.8; font-weight: 500; margin-bottom: 0.5em; font-style: italic !important; padding-left: 0; text-align: justify;">and LEAN NOT ON YOUR OWN <b>UNDERSTANDING</b>;</p>
+            <p style="font-size: 1em; line-height: 1.8; font-weight: 500; margin-bottom: 0.5em; font-style: italic !important; padding-left: 0; text-align: justify;">in all your ways submit to him,</p>
+            <p style="font-size: 1em; line-height: 1.8; font-weight: 500; margin-bottom: 0; font-style: italic !important; padding-left: 0; text-align: justify;">and he will make your paths straight."</p>
         </div>
-        <p style="font-size: 1.1em; line-height: 1.8; font-weight: 500; margin-bottom: 1em; font-style: normal !important;">When I embraced these verses, I ceded my right to <b>MENTAL CLARITY</b> to Yahweh.</p>
-        <p style="font-size: 1.1em; line-height: 1.8; font-weight: 500; margin-bottom: 1em; font-style: normal !important;">Through these same 2 verses, I unknowingly gave Yahweh the right <b>TO INTERFERE</b> in "all [my] ways" or <b>ALL ASPECTS</b> of my life when I submitted to him.</p>
+        <p style="font-size: 1em; line-height: 1.8; font-weight: 500; margin-bottom: 1em; font-style: normal !important; text-align: justify;">When I embraced these verses, I ceded my right to <b>MENTAL CLARITY</b> to Yahweh.</p>
+        <p style="font-size: 1em; line-height: 1.8; font-weight: 500; margin-bottom: 1em; font-style: normal !important; text-align: justify;">Through these same 2 verses, I unknowingly gave Yahweh the right <b>TO INTERFERE</b> in "all [my] ways" or <b>ALL ASPECTS</b> of my life when I submitted to him.</p>
         <p style="margin-bottom: 1em;"></p>
-        <p style="font-size: 1.1em; line-height: 1.8; font-weight: 500; margin-bottom: 1em; font-style: normal !important;">I acknowledge that I <b>undermined</b> my <b>UNION</b> with <b>THE FATHER JESUS REVEALED</b> and with His <b>DIVINE NATURE</b>, (including my ability to <b>discern between 'good' and 'evil'</b>, and my ability to <b>exercise authority</b> over this 3D world.) I did this while deceived by the numerous <b>programming tricks</b> deployed by Yahweh:</p>
-        <p style="font-size: 1.1em; line-height: 1.8; font-weight: 500; margin-bottom: 1em; margin-top: 1em; font-style: normal !important;"><b>1)</b> I repeatedly <b>UNDERMINED MY IDENTITY</b> when I affirmed <b>'worm theology'</b> verses stating</p>
-        <p style="font-size: 1.1em; line-height: 1.8; font-weight: 500; margin-bottom: 1em; padding-left: 1em; font-style: normal !important;">-that I'm <b>fundamentally flawed</b> and <b>unworthy</b> of even entering my Father's presence.</p>
-        <p style="font-size: 1.1em; line-height: 1.8; font-weight: 500; margin-bottom: 1em; padding-left: 1em; font-style: normal !important;">- that I <b>'fall short'</b> of my Father's glory (Romans 3:23), including that I was <b>SINFUL</b> at and even <b>BEFORE</b> birth (Psalm 51:5 "Surely I was sinful at birth, sinful from the time my mother conceived me.")</p>
+        <p style="font-size: 1em; line-height: 1.8; font-weight: 500; margin-bottom: 1em; font-style: normal !important; text-align: justify;">I acknowledge that I <b>undermined</b> my <b>UNION</b> with <b>THE FATHER JESUS REVEALED</b> and with His <b>DIVINE NATURE</b>, (including my ability to <b>discern between 'good' and 'evil'</b>, and my ability to <b>exercise authority</b> over this 3D world.) I did this while deceived by the numerous <b>programming tricks</b> deployed by Yahweh:</p>
+        <p style="font-size: 1em; line-height: 1.8; font-weight: 500; margin-bottom: 1em; margin-top: 1em; font-style: normal !important; text-align: justify;"><b>1)</b> I repeatedly <b>UNDERMINED MY IDENTITY</b> when I affirmed <b>'worm theology'</b> verses stating</p>
+        <p style="font-size: 1em; line-height: 1.8; font-weight: 500; margin-bottom: 1em; padding-left: 1em; font-style: normal !important; text-align: justify;">-that I'm <b>fundamentally flawed</b> and <b>unworthy</b> of even entering my Father's presence.</p>
+        <p style="font-size: 1em; line-height: 1.8; font-weight: 500; margin-bottom: 1em; padding-left: 1em; font-style: normal !important; text-align: justify;">- that I <b>'fall short'</b> of my Father's glory (Romans 3:23), including that I was <b>SINFUL</b> at and even <b>BEFORE</b> birth (Psalm 51:5 "Surely I was sinful at birth, sinful from the time my mother conceived me.")</p>
         <img src="worm_theology.jpg" alt="Worm Theology" style="max-width: 100%; height: auto; margin: 1.5em auto; display: block;"/>
-        <p style="font-size: 1.1em; line-height: 1.8; font-weight: 500; margin-bottom: 1em; margin-top: 1em; font-style: normal !important;"><b>2)</b> I repeatedly <b>UPLIFTED EVIL</b> when I sang and spoke <b>praises ('halals')</b> to Yahweh and when I spoke or sang the word <b>"Hallelujah"</b>!</p>
+        <p style="font-size: 1em; line-height: 1.8; font-weight: 500; margin-bottom: 1em; margin-top: 1em; font-style: normal !important; text-align: justify;"><b>2)</b> I repeatedly <b>UPLIFTED EVIL</b> when I sang and spoke <b>praises ('halals')</b> to Yahweh and when I spoke or sang the word <b>"Hallelujah"</b>!</p>
         <img src="hallelujah.jpg" alt="Hallelujah" style="max-width: 100%; height: auto; margin: 1.5em auto; display: block;"/>
-        <p style="font-size: 1.1em; line-height: 1.8; font-weight: 500; margin-bottom: 1em; margin-top: 1em; font-style: normal !important;"><b>3)</b> I unwittingly <b>MALIGNED MY FATHER'S CHARACTER</b> when I affirmed and supported <b>PAUL'S IDEAS</b> including:</p>
-        <p style="font-size: 1.1em; line-height: 1.8; font-weight: 500; margin-bottom: 1em; padding-left: 1em; font-style: normal !important;"><b>a)</b> Yahweh's horrific <b>'blood sacrifice'</b> idea: when I made Jesus a <b>blood sacrifice</b> by <b>'eating'</b> and <b>'drinking'</b> his blood as a remembrance ritual (similar to numerous Satanic rituals), thereby affirming that my Father is a <b>deranged torturer</b> who <b>kills his own family</b> because he needs <b>payment before he can forgive</b>.</p>
+        <p style="font-size: 1em; line-height: 1.8; font-weight: 500; margin-bottom: 1em; margin-top: 1em; font-style: normal !important; text-align: justify;"><b>3)</b> I unwittingly <b>MALIGNED MY FATHER'S CHARACTER</b> when I affirmed and supported <b>PAUL'S IDEAS</b> including:</p>
+        <p style="font-size: 1em; line-height: 1.8; font-weight: 500; margin-bottom: 1em; padding-left: 1em; font-style: normal !important; text-align: justify;"><b>a)</b> Yahweh's horrific <b>'blood sacrifice'</b> idea: when I made Jesus a <b>blood sacrifice</b> by <b>'eating'</b> and <b>'drinking'</b> his blood as a remembrance ritual (similar to numerous Satanic rituals), thereby affirming that my Father is a <b>deranged torturer</b> who <b>kills his own family</b> because he needs <b>payment before he can forgive</b>.</p>
         <img src="blood_communion.jpg" alt="Blood Communion" style="max-width: 100%; height: auto; margin: 1.5em auto; display: block;"/>
-        <p style="font-size: 1.1em; line-height: 1.8; font-weight: 500; margin-bottom: 1em; margin-top: 1em; padding-left: 1em; font-style: normal !important;"><b>b)</b> Paul's evil <b>PREDESTINATION</b> idea … that our loving Father, before earth was created, drew up a list of names of people he would <b>'love'</b>, and another list of people he would <b>'hate'</b> and vent his wrath on (as Paul explains in Romans 9:11-13, using Jacob and Esau as an example.)</p>
+        <p style="font-size: 1em; line-height: 1.8; font-weight: 500; margin-bottom: 1em; margin-top: 1em; padding-left: 1em; font-style: normal !important; text-align: justify;"><b>b)</b> Paul's evil <b>PREDESTINATION</b> idea … that our loving Father, before earth was created, drew up a list of names of people he would <b>'love'</b>, and another list of people he would <b>'hate'</b> and vent his wrath on (as Paul explains in Romans 9:11-13, using Jacob and Esau as an example.)</p>
         <img src="list_jacob_esau.jpg" alt="List Jacob Esau" style="max-width: 100%; height: auto; margin: 1.5em auto; display: block;"/>
-        <p style="font-size: 1.1em; line-height: 1.8; font-weight: 500; margin-bottom: 1em; margin-top: 1.5em; font-style: normal !important;"><b>Today I undo all of this.</b></p>
-        <p style="font-size: 1.1em; line-height: 1.8; font-weight: 500; margin-bottom: 1em; font-style: normal !important;">I now initiate a <b>full debugging</b> … a <b>reversal</b> of every <b>false program, thought-form, imprint, and declaration</b> that <b>empowered darkness</b>, <b>diminished my divine identity</b> or <b>distorted the identity and character</b>  of my Father.</p>
-        <p style="font-size: 1.1em; line-height: 1.8; font-weight: 500; margin-bottom: 1em; font-style: normal !important;">By my <b>spoken word</b>, I <b>remember who I am</b>.</p>
-        <p style="font-size: 1.1em; line-height: 1.8; font-weight: 500; margin-bottom: 1em; font-style: normal !important;">I <b>restore my union</b> with the Father.</p>
-        <p style="font-size: 1.1em; line-height: 1.8; font-weight: 500; margin-bottom: 1em; font-style: normal !important;">I return to the God Jesus revealed … the God of <b>love, light, mercy, and oneness</b>.</p>
-        <p style="font-size: 1.1em; line-height: 1.8; font-weight: 500; margin-bottom: 1em; font-style: normal !important;">I step into <b>freedom</b>.</p>
-        <p style="font-size: 1.1em; line-height: 1.8; font-weight: 500; margin-bottom: 1em; font-style: normal !important;">I step into <b>truth</b>.</p>
-        <p style="font-size: 1.1em; line-height: 1.8; font-weight: 500; margin-bottom: 1em; font-style: normal !important;">I step into my <b>original identity</b>.</p>
-        <p style="font-size: 1.1em; line-height: 1.8; font-weight: 500; margin-top: 1.5em; color: #007acc; text-align: center; font-style: normal !important;"><b>So be it.</b></p>
+        <p style="font-size: 1em; line-height: 1.8; font-weight: 500; margin-bottom: 1em; margin-top: 1.5em; font-style: normal !important; text-align: justify;"><b>TODAY I UNDO ALL OF THIS.</b></p>
+        <p style="font-size: 1em; line-height: 1.8; font-weight: 500; margin-bottom: 1em; font-style: normal !important; text-align: justify;">I now initiate a <b>full debugging</b> … a <b>reversal</b> of every <b>false program, thought-form, imprint, and declaration</b> that <b>empowered darkness</b>, <b>diminished my divine identity</b> or <b>distorted the identity and character</b>  of my Father.</p>
+        <p style="font-size: 1em; line-height: 1.8; font-weight: 500; margin-bottom: 1em; font-style: normal !important; text-align: justify;">By my <b>spoken word</b>, I <b>remember who I am</b>.</p>
+        <p style="font-size: 1em; line-height: 1.8; font-weight: 500; margin-bottom: 1em; font-style: normal !important; text-align: justify;">I <b>restore my union</b> with the Father.</p>
+        <p style="font-size: 1em; line-height: 1.8; font-weight: 500; margin-bottom: 1em; font-style: normal !important; text-align: justify;">I return to the God Jesus revealed … the God of <b>love, light, mercy, and oneness</b>.</p>
+        <p style="font-size: 1em; line-height: 1.8; font-weight: 500; margin-bottom: 1em; font-style: normal !important; text-align: justify;">I step into <b>freedom</b>.</p>
+        <p style="font-size: 1em; line-height: 1.8; font-weight: 500; margin-bottom: 1em; font-style: normal !important; text-align: justify;">I step into <b>truth</b>.</p>
+        <p style="font-size: 1em; line-height: 1.8; font-weight: 500; margin-bottom: 1em; font-style: normal !important; text-align: justify;">I step into my <b>original identity</b>.</p>
+        <p style="font-size: 1em; line-height: 1.8; font-weight: 500; margin-top: 1.5em; color: #007acc; text-align: center; font-style: normal !important;"><b>So be it.</b></p>
     </div>
     
     <nav class="navigation" style="text-align: center; margin-top: 2em; padding: 1em; border-top: 1px solid #eee;">

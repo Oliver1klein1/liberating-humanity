@@ -14,7 +14,7 @@
         <dc:rights>© 2025 Ansilo Boff. All rights reserved.</dc:rights>
         <meta name="cover" content="cover-image"/>
         <meta property="dcterms:modified">2025-11-06T12:00:00Z</meta>
-        <dc:description>Book 1 of the "Rediscover Jesus Subverted Teachings And The Father's Love" Series, Liberating Humanity exposes the contradictions between Yahweh … the Old Testament deity who demanded sacrifice, commanded genocide, and dwelled in darkness … and the Father Jesus revealed: a God of unconditional love, mercy, and unapproachable light. Through forensic analysis of Scripture, this book reveals how Jesus' teachings directly contradicted Yahweh's commands, how Paul's theology diverged from Jesus' message, and how biblical texts may have been altered to preserve the sacrificial system that Jesus rejected.</dc:description>
+        <dc:description>Book 1 of the "Rediscovering Jesus' Subverted Teachings And The Father's Love" Series, Liberating Humanity exposes the contradictions between Yahweh … the Old Testament deity who demanded sacrifice, commanded genocide, and dwelled in darkness … and the Father Jesus revealed: a God of unconditional love, mercy, and unapproachable light. Through forensic analysis of Scripture, this book reveals how Jesus' teachings directly contradicted Yahweh's commands, how Paul's theology diverged from Jesus' message, and how biblical texts may have been altered to preserve the sacrificial system that Jesus rejected.</dc:description>
         
         <!-- Subject tags for discoverability -->
         <dc:subject>bible contradictions</dc:subject>
@@ -80,6 +80,8 @@
         <item id="c097-paul-apostleship" href="c097-paul-apostleship.jpg" media-type="image/jpeg"/>
         <item id="ink-parchment" href="ink-parchment.jpg" media-type="image/jpeg"/>
         <item id="wedding-rings" href="wedding_rings.jpg" media-type="image/jpeg"/>
+        <item id="dedication-image" href="dedication.jpg" media-type="image/jpeg"/>
+        <item id="acknowledgments-image" href="acknowledgments.jpg" media-type="image/jpeg"/>
         
         
         <!-- Father's Heart Series Book Covers -->
@@ -99,6 +101,7 @@
         <item id="cover" href="title.xhtml" media-type="application/xhtml+xml"/>
         <item id="toc" href="toc.xhtml" media-type="application/xhtml+xml" properties="nav"/>
         <item id="copyright" href="copyright.xhtml" media-type="application/xhtml+xml"/>
+        <item id="dedication" href="dedication.xhtml" media-type="application/xhtml+xml"/>
         <item id="intro" href="intro.xhtml" media-type="application/xhtml+xml"/>
         <item id="part1" href="part1.xhtml" media-type="application/xhtml+xml"/>
         <item id="chapter1" href="chapter1.xhtml" media-type="application/xhtml+xml"/>
@@ -113,6 +116,7 @@
         <item id="chapter8" href="chapter8.xhtml" media-type="application/xhtml+xml"/>
         <item id="chapter9" href="chapter9.xhtml" media-type="application/xhtml+xml"/>
         <item id="chapter10" href="chapter10.xhtml" media-type="application/xhtml+xml"/>
+        <item id="acknowledgments" href="acknowledgments.xhtml" media-type="application/xhtml+xml"/>
         <item id="appendix1" href="appendix1.xhtml" media-type="application/xhtml+xml"/>
         <item id="appendix2" href="appendix2.xhtml" media-type="application/xhtml+xml"/>
         <item id="appendix3" href="appendix3.xhtml" media-type="application/xhtml+xml"/>
@@ -124,6 +128,7 @@
         <itemref idref="cover"/>
         <itemref idref="toc"/>
         <itemref idref="copyright"/>
+        <itemref idref="dedication"/>
         <itemref idref="intro"/>
         <itemref idref="part1"/>
         <itemref idref="chapter1"/>
@@ -138,6 +143,7 @@
         <itemref idref="chapter8"/>
         <itemref idref="chapter9"/>
         <itemref idref="chapter10"/>
+        <itemref idref="acknowledgments"/>
         <itemref idref="appendix1"/>
         <itemref idref="appendix2"/>
         <itemref idref="appendix3"/>

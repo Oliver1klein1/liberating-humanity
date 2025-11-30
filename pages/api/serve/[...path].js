@@ -61,9 +61,46 @@ export default async function handler(req, res) {
     // Read and serve the file (binary for images, text for others)
     if (isBinary) {
       const content = fs.readFileSync(resolvedPath);
-      return res.status(200).setHeader('Content-Type', contentType).send(content);
+      // Set proper headers for images
+      res.setHeader('Content-Type', contentType);
+      res.setHeader('Content-Length', content.length);
+      res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+      return res.status(200).send(content);
     } else {
-      const content = fs.readFileSync(resolvedPath, 'utf8');
+      let content = fs.readFileSync(resolvedPath, 'utf8');
+      
+      // Process xhtml/html files to fix image and asset paths
+      if (requestedPath.endsWith('.xhtml') || requestedPath.endsWith('.html')) {
+        // Convert absolute image paths (/cover.jpg) to /epub/cover.jpg
+        content = content.replace(/src=["']\/([^"']+\.(jpg|jpeg|png|gif|svg|css|js))["']/gi, (match, filePath) => {
+          return `src="/epub/${filePath}"`;
+        });
+        // Convert absolute href paths for xhtml files
+        content = content.replace(/href=["']\/([^"']+\.(xhtml|html))["']/gi, (match, filePath) => {
+          return `href="/epub/${filePath}"`;
+        });
+        // Convert relative paths in href
+        content = content.replace(/href=["']([^"']+\.(xhtml|html|css))["']/gi, (match, filePath) => {
+          if (filePath.startsWith('http') || filePath.startsWith('/epub/') || filePath.startsWith('#')) {
+            return match;
+          }
+          if (!filePath.startsWith('/')) {
+            return `href="/epub/${filePath}"`;
+          }
+          return match;
+        });
+        // Convert relative paths in src (for images)
+        content = content.replace(/src=["']([^"']+\.(jpg|jpeg|png|gif|svg|css|js))["']/gi, (match, filePath) => {
+          if (filePath.startsWith('http') || filePath.startsWith('/epub/') || filePath.startsWith('data:')) {
+            return match;
+          }
+          if (!filePath.startsWith('/')) {
+            return `src="/epub/${filePath}"`;
+          }
+          return match;
+        });
+      }
+      
       return res.status(200).setHeader('Content-Type', contentType).send(content);
     }
   } catch (error) {

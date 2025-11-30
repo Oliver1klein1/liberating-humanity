@@ -1768,6 +1768,13 @@ body.kdp-mode nav[class="navigation"] a {
 }
 
 @media print {
+    /* CRITICAL: Force black and white printing FIRST - highest priority */
+    * {
+        -webkit-print-color-adjust: economy !important;
+        print-color-adjust: economy !important;
+        color-adjust: economy !important;
+    }
+    
     /* Page setup for 6x9 inch paperback */
     @page {
         size: 6in 9in;
@@ -1788,9 +1795,20 @@ body.kdp-mode nav[class="navigation"] a {
         size: 6in 9in;
     }
     
-    /* CRITICAL: Hide ALL navigation elements FIRST - highest priority for print */
+    /* CRITICAL: Hide ALL navigation buttons FIRST - highest priority for print */
     /* This must come early to override everything else */
     /* Use maximum specificity to override inline styles */
+    /* Target ALL navigation elements and buttons */
+    nav.navigation,
+    .navigation,
+    nav[class="navigation"],
+    nav[class*="navigation"],
+    nav:not([epub\:type="toc"]):not([epub|type="toc"]),
+    nav.navigation a,
+    .navigation a,
+    a[style*="background: #007acc"],
+    a[style*="background-color: #007acc"],
+    a[style*="display: inline-block"][style*="background"],
     html body nav.navigation,
     html body .navigation,
     body nav.navigation,
@@ -1901,9 +1919,11 @@ body.kdp-mode nav[class="navigation"] a {
     }
     
     /* Base print styles - 6x9 layout, BLACK AND WHITE for trade paperbacks */
+    /* Force all elements to black and white - highest priority */
     * {
         -webkit-print-color-adjust: economy !important;
         print-color-adjust: economy !important;
+        color-adjust: economy !important;
         -webkit-filter: grayscale(100%) !important;
         filter: grayscale(100%) !important;
     }
@@ -1920,8 +1940,14 @@ body.kdp-mode nav[class="navigation"] a {
         text-align: justify;
         -webkit-print-color-adjust: economy !important;
         print-color-adjust: economy !important;
+        color-adjust: economy !important;
         -webkit-filter: grayscale(100%) !important;
         filter: grayscale(100%) !important;
+    }
+    
+    /* Force ALL text to black for black and white printing */
+    body * {
+        color: #000000 !important;
     }
     
     /* Links - black text with underline (except TOC) */
@@ -2920,22 +2946,41 @@ body.kdp-mode nav[class="navigation"] a {
         widows: 1 !important;
     }
     
-    /* Tables */
+    /* Tables - ensure all borders are visible in print */
+    /* Use separate borders to ensure ALL borders are visible */
     table {
         page-break-inside: auto;
-        border-collapse: collapse;
+        border-collapse: separate !important;
+        border-spacing: 0 !important;
         width: 100%;
         margin: 1rem 0;
         -webkit-print-color-adjust: economy !important;
         print-color-adjust: economy !important;
+        /* Force visible borders on all tables */
+        border: 1px solid #000 !important;
+        border-top: 1px solid #000 !important;
+        border-right: 1px solid #000 !important;
+        border-bottom: 1px solid #000 !important;
+        border-left: 1px solid #000 !important;
+    }
+    
+    /* Override ALL inline border-collapse styles - force separate */
+    table[style*="border-collapse"] {
+        border-collapse: separate !important;
+        border-spacing: 0 !important;
     }
     
     tr {
         page-break-inside: avoid;
     }
     
+    /* Ensure all table cells have visible black borders */
     th, td {
         border: 1px solid #000 !important;
+        border-top: 1px solid #000 !important;
+        border-right: 1px solid #000 !important;
+        border-bottom: 1px solid #000 !important;
+        border-left: 1px solid #000 !important;
         padding: 0.4rem;
         text-align: left;
         background: #fff !important;
@@ -2944,10 +2989,45 @@ body.kdp-mode nav[class="navigation"] a {
         print-color-adjust: economy !important;
     }
     
+    /* CRITICAL: Override ALL inline border styles on table cells - highest specificity */
+    /* Target tables inside comparison-table divs */
+    .comparison-table table th[style],
+    .comparison-table table td[style],
+    table th[style],
+    table td[style],
+    .comparison-table th[style],
+    .comparison-table td[style],
+    th[style*="border"],
+    td[style*="border"],
+    /* Target specific inline border colors */
+    td[style*="#e2e8f0"],
+    th[style*="#e2e8f0"],
+    td[style*="#4a5568"],
+    th[style*="#4a5568"] {
+        border: 1px solid #000 !important;
+        border-top: 1px solid #000 !important;
+        border-right: 1px solid #000 !important;
+        border-bottom: 1px solid #000 !important;
+        border-left: 1px solid #000 !important;
+    }
+    
+    /* Override any inline styles that might remove borders */
+    th[style*="border: none"],
+    th[style*="border:none"],
+    td[style*="border: none"],
+    td[style*="border:none"] {
+        border: 1px solid #000 !important;
+        border-top: 1px solid #000 !important;
+        border-right: 1px solid #000 !important;
+        border-bottom: 1px solid #000 !important;
+        border-left: 1px solid #000 !important;
+    }
+    
     th {
         font-weight: bold;
         background: #f5f5f5 !important;
         color: #000000 !important;
+        border: 1px solid #000 !important;
     }
     
     /* Chapter headers */
@@ -3186,18 +3266,86 @@ body.kdp-mode nav[class="navigation"] a {
     }
     
     /* Comparison tables and infographics */
-    .comparison-table td,
-    .comparison-table th {
+    /* CRITICAL FIX: Use separate borders for print to ensure ALL borders are visible */
+    .comparison-table,
+    .comparison-table table {
+        border-collapse: separate !important;
+        border-spacing: 0 !important;
         border: 1px solid #000 !important;
+    }
+    
+    /* Override ALL inline border-collapse styles */
+    .comparison-table[style*="border-collapse"],
+    .comparison-table table[style*="border-collapse"] {
+        border-collapse: separate !important;
+        border-spacing: 0 !important;
+    }
+    
+    /* Force black borders on ALL comparison table cells - override inline styles */
+    .comparison-table td,
+    .comparison-table th,
+    .comparison-table table td,
+    .comparison-table table th {
+        border: 1px solid #000 !important;
+        border-top: 1px solid #000 !important;
+        border-right: 1px solid #000 !important;
+        border-bottom: 1px solid #000 !important;
+        border-left: 1px solid #000 !important;
         background: #fff !important;
         color: #000 !important;
         -webkit-print-color-adjust: economy !important;
         print-color-adjust: economy !important;
     }
     
-    .comparison-table th {
+    /* NUCLEAR OPTION: Override ALL inline styles on comparison table cells */
+    .comparison-table td[style],
+    .comparison-table th[style],
+    .comparison-table table td[style],
+    .comparison-table table th[style],
+    .comparison-table tbody td[style],
+    .comparison-table tbody th[style],
+    .comparison-table thead td[style],
+    .comparison-table thead th[style],
+    .comparison-table table tbody td[style],
+    .comparison-table table tbody th[style],
+    .comparison-table table thead td[style],
+    .comparison-table table thead th[style] {
+        border: 1px solid #000 !important;
+        border-top: 1px solid #000 !important;
+        border-right: 1px solid #000 !important;
+        border-bottom: 1px solid #000 !important;
+        border-left: 1px solid #000 !important;
+    }
+    
+    /* Ensure every cell has borders - target by row position */
+    .comparison-table tbody tr td,
+    .comparison-table tbody tr th,
+    .comparison-table table tbody tr td,
+    .comparison-table table tbody tr th {
+        border-top: 1px solid #000 !important;
+        border-bottom: 1px solid #000 !important;
+        border-left: 1px solid #000 !important;
+        border-right: 1px solid #000 !important;
+    }
+    
+    /* Ensure header row has borders */
+    .comparison-table thead tr th,
+    .comparison-table table thead tr th {
+        border-top: 1px solid #000 !important;
+        border-bottom: 1px solid #000 !important;
+        border-left: 1px solid #000 !important;
+        border-right: 1px solid #000 !important;
+    }
+    
+    .comparison-table th,
+    .comparison-table table th {
         background: #f5f5f5 !important;
         color: #000 !important;
+        border: 1px solid #000 !important;
+        border-top: 1px solid #000 !important;
+        border-right: 1px solid #000 !important;
+        border-bottom: 1px solid #000 !important;
+        border-left: 1px solid #000 !important;
     }
     
     .comparison-title {

@@ -4,11 +4,13 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: '/:path*',
+        source: '/epub/:path*',
         destination: '/api/serve/:path*',
       },
     ];
   },
+  // Disable strict mode to avoid double rendering
+  reactStrictMode: false,
 };
 
 module.exports = nextConfig;

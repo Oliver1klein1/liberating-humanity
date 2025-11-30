@@ -43,6 +43,37 @@ def clone_epub_tree(destination: Path) -> None:
     shutil.copytree(EPUB_ROOT, destination)
 
 
+def fix_image_paths(oebps_path: Path) -> None:
+    """
+    Convert absolute image paths (/cover.jpg) to relative paths (cover.jpg)
+    in all XHTML and HTML files. EPUBs require relative paths.
+    """
+    for file_path in sorted(oebps_path.glob("*.xhtml")) + sorted(oebps_path.glob("*.html")):
+        text = file_path.read_text(encoding="utf-8")
+        original_text = text
+        
+        # Convert absolute image paths (/cover.jpg) to relative (cover.jpg)
+        # Match src="/filename.jpg" or src='/filename.jpg'
+        text = re.sub(
+            r'src=["\']\/([^"\']+\.(jpg|jpeg|png|gif|svg|css|js))["\']',
+            r'src="\1"',
+            text,
+            flags=re.IGNORECASE
+        )
+        
+        # Also handle href attributes for links to other files
+        text = re.sub(
+            r'href=["\']\/([^"\']+\.(xhtml|html))["\']',
+            r'href="\1"',
+            text,
+            flags=re.IGNORECASE
+        )
+        
+        if text != original_text:
+            file_path.write_text(text, encoding="utf-8")
+            print(f"  Fixed image paths in {file_path.name}")
+
+
 def add_kdp_mode_to_bodies(oebps_path: Path) -> None:
     """
     Add class="kdp-mode" to all <body> elements in XHTML files.
@@ -178,6 +209,7 @@ def build_epubs() -> None:
         print("Creating standard EPUB (Gumroad)...")
         standard_path = tmp_path / "standard"
         clone_epub_tree(standard_path)
+        fix_image_paths(standard_path / "OEBPS")
         standard_epub = tmp_path / STANDARD_FILENAME
         create_epub(standard_path, standard_epub)
         
@@ -196,6 +228,7 @@ def build_epubs() -> None:
         print("Creating KDP EPUB (Amazon Kindle)...")
         kdp_path = tmp_path / "kdp"
         clone_epub_tree(kdp_path)
+        fix_image_paths(kdp_path / "OEBPS")
         add_kdp_mode_to_bodies(kdp_path / "OEBPS")
         kdp_epub = tmp_path / KDP_FILENAME
         create_epub(kdp_path, kdp_epub)

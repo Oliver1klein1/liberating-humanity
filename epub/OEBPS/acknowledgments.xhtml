@@ -2,10 +2,26 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
 <head>
-    <title>Copyright</title>
+    <title>Acknowledgments</title>
     <link rel="stylesheet" type="text/css" href="styles.css"/>
     <meta charset="UTF-8"/>
     <style type="text/css">
+        .acknowledgments-page {
+            text-align: center;
+            padding: 4rem 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .acknowledgments-image {
+            max-width: 80%;
+            width: 80%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
         @media print {
             /* CRITICAL: Hide navigation buttons when printing - inline styles in HTML override external CSS */
             nav.navigation,
@@ -40,19 +56,15 @@
     </style>
 </head>
 <body>
-    <div class="copyright-page">
-        <img src="/ansilo_boff_logo_final_white_bg.jpg" alt="Ansilo Boff Logo" style="display: block; margin: 0 auto 2em auto; width: 40%; max-width: 320px; height: auto;"/>
-        <div class="copyright-text">
-            © Copyright 2025 - All rights reserved.<br/><br/>
-            It is not legal to reproduce, duplicate, or transmit any part of this document in either electronic means or printed format. Recording of this publication is strictly prohibited.
-        </div>
-        <img src="/tbt_logo_final_white_bg.jpg" alt="TBT Logo" style="display: block; margin: 2em auto 0 auto; width: 40%; max-width: 320px; height: auto;"/>
+    <div class="acknowledgments-page">
+        <img src="acknowledgments.jpg" alt="Acknowledgments" class="acknowledgments-image"/>
     </div>
     
     <nav class="navigation" style="text-align: center; margin-top: 2em; padding: 1em; border-top: 1px solid #eee;">
-        <a href="title.xhtml" style="margin: 0 0.5em; padding: 0.5em 1em; background: #007acc; color: white; border: none; border-radius: 4px; text-decoration: none; display: inline-block;">← Backward</a>
+        <a href="chapter10.xhtml" style="margin: 0 0.5em; padding: 0.5em 1em; background: #007acc; color: white; border: none; border-radius: 4px; text-decoration: none; display: inline-block;">← Backward</a>
         <a href="toc.xhtml" style="margin: 0 0.5em; padding: 0.5em 1em; background: #007acc; color: white; border: none; border-radius: 4px; text-decoration: none; display: inline-block;">Contents</a>
-        <a href="dedication.xhtml" style="margin: 0 0.5em; padding: 0.5em 1em; background: #007acc; color: white; border: none; border-radius: 4px; text-decoration: none; display: inline-block;">Forward →</a>
+        <a href="appendix1.xhtml" style="margin: 0 0.5em; padding: 0.5em 1em; background: #007acc; color: white; border: none; border-radius: 4px; text-decoration: none; display: inline-block;">Forward →</a>
     </nav>
 </body>
 </html>
+
